@@ -5,5 +5,5 @@ This repo is the SDK for the Financial Partners API.
 
 | Directory     |                |
 | ------------- | -------------- |
-| Docs          | documentation  | 
-| Samples       | root level for all samples |
+| docs          | documentation  | 
+| samples       | root level for all samples |
