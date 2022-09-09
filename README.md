@@ -1,2 +1,2 @@
-# fps-sdk
-SDK for the Financial Partners API
+# fps sdk
+This repo is the SDK for the Financial Partners API.
