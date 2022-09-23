@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Partner API',
+  tagline: 'Connecting with Kiva Marketplace',
+  url: 'https://fps-sdk-portal.web.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -57,7 +57,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Partner API',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -70,9 +70,10 @@ const config = {
             label: 'Tutorial',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/docs/guides/bug', label: 'FILL A BUG', position: 'right'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            href: 'https://github.com/Kiva/fsp-sdk',
+            label: 'SDKs',
             position: 'right',
           },
         ],
@@ -90,19 +91,11 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'Guides',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Filling a Bug',
+                to: '/docs/guides/bug',
               },
             ],
           },
@@ -115,12 +108,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/Kiva/fps-sdk',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Kiva Microfunds, Inc. `,
       },
       prism: {
         theme: lightCodeTheme,

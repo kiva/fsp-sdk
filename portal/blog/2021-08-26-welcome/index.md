@@ -1,25 +1,18 @@
 ---
 slug: welcome
-title: Welcome
-authors: [slorber, yangshun]
-tags: [facebook, hello, docusaurus]
+title: Welcome to the Partner API Public Docs
+authors: [mjohnson, nage]
+tags: [kiva, partner-api]
 ---
 
-[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).
+Is with great joy that we are publishing this new portal today. The Kiva Partner API was conceived
+to increase integration, and the success rate of using the Kiva Marketplace to fund global microloans.
 
-Simply add Markdown files (or folders) to the `blog` directory.
+On this new portal we will document new ways to integrate with the API, as well as sharing all of
+what we have learned from working with our Partners.
 
-Regular blog authors can be added to `authors.yml`.
+Stay tuned.
 
-The blog post date can be extracted from filenames, such as:
-
-- `2019-05-30-welcome.md`
-- `2019-05-30-welcome/index.md`
-
-A blog post folder can be convenient to co-locate blog post images:
-
-![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)
-
-The blog supports tags as well!
+![Docusaurus Plushie](./image.jpeg)
 
 **And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config.

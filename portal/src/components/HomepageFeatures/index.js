@@ -4,32 +4,30 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Ready to Integrate',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        The Kiva Partner API was designed from the ground up to be integrated into existing financial systems
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Pre-made SDKs',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        The API is supported by specialized SDKs that reduce the cost of integration. Go
+        ahead and find the one that matches your existing tech stack.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Close Customer Support',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Our product managers and engineers are on the ready to help your integration succeed.
       </>
     ),
   },
