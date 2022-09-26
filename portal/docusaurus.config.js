@@ -95,7 +95,7 @@ const config = {
             title: 'Guides',
             items: [
               {
-                label: 'Filling a Bug',
+                label: 'File a Bug',
                 to: '/docs/guides/bug',
               },
             ],
