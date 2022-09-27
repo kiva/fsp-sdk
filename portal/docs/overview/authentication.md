@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# API authentication (client credential flow)
+# API authentication
 
 The following instructions are for authenticating with Kiva's test environment, Stage. This is the first step in any API integration. If you have already completed your testing, and your tests have been approved by Kiva, follow the instructions on the page called "Authenticating to Kiva's production environment (AFTER testing)"
 The new Partner API is accessible using an Oauth2 JWT obtained from Kiva’s auth service following Oauth2 Client Credentials flow. More simply, this is an exchange of the Partner’s client credentials for a limited lifespan token that can be used for authentication and authorization.
