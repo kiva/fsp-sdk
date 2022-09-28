@@ -65,15 +65,20 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'overview/overview',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Introduction',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
-          {to: '/docs/guides/bug', label: 'FILL A BUG', position: 'right'},
+          {href: 'https://partner-api.k1.kiva.org/swagger-ui', label: 'API Reference', position: 'left'},
           {
             href: 'https://github.com/Kiva/fsp-sdk',
             label: 'SDKs',
+            position: 'right',
+          },
+          {
+            href: 'https://kiva.tfaforms.net/107',
+            label: 'Start Your Integration',
             position: 'right',
           },
         ],
@@ -94,7 +99,7 @@ const config = {
             title: 'Guides',
             items: [
               {
-                label: 'Filling a Bug',
+                label: 'File a Bug',
                 to: '/docs/guides/bug',
               },
             ],
