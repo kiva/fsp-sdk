@@ -14,7 +14,7 @@ This changelog lists all additions and updates to the Kiva Partner API, in chron
 ## September 26, 2022
 1. Image Upload Improvements for Loan Drafting: The `loan_draft` endpoint now accepts an `image_encoded` field, and the `image_url` field has been **deprecated**.
 
-### Change Details
+### Additional Details
 
 #### Image upload improvements for Loan Drafting
 Historically, Kiva accepts borrower images in the `image_url` field. **In order to protected the privacy of our borrowers, we recommend our partners update their implementations to send the image through the `image_encoded` field**. To maintain compatibility, `image_url` will continue to be supported, but it will be removed from the official documentation.
