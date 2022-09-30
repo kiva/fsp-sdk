@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Change Log
 
-** Keep track of important updates to the Kiva Partner API. **
+** Keep track of changes to the Kiva Partner API. **
 
 This changelog lists all additions and updates to the Kiva Partner API, in chronological order.
 
