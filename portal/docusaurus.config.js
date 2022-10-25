@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Partner API',
-  tagline: 'Connecting with Kiva Marketplace',
+  tagline: 'Placing your loans in the Kiva Marketplace',
   url: 'https://fps-sdk-portal.web.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -34,17 +34,9 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -57,9 +49,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Partner API',
+        title: 'Partner API Docs',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Partner APIo',
           src: 'img/logo.svg',
         },
         items: [
@@ -69,7 +61,6 @@ const config = {
             position: 'left',
             label: 'Introduction',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {href: 'https://partner-api.k1.kiva.org/swagger-ui', label: 'API Reference', position: 'left'},
           {
             href: 'https://github.com/Kiva/fsp-sdk',
