@@ -9,7 +9,7 @@ The new Partner API is accessible using an Oauth2 JWT obtained from Kiva’s aut
 
 ### Sample Request (test environment)
 
-```
+```json
 1 curl --location --request POST 'https://auth-stage.dk1.kiva.org/oauth/token' \
 2 --header 'Accept: application/json' \
 3 --header 'Content-Type: application/x-www-form-urlencoded' \
@@ -21,11 +21,12 @@ The new Partner API is accessible using an Oauth2 JWT obtained from Kiva’s aut
 ```
 
 ### Post Data
-* grant_type - required. This will always have the value client_credentials.
-* scope - this represents the actions that within the Partner API that need to be executed. If the partner is authorized for these actions, the returned JWT will contain all authorized actions. Valid scopes are read:loans, create:loan_draft, create:journal_update, create:repayment.
-* audience - this identifies the audience for the JWT, which is the API where the JWT will be used.
-* client_id - this is the first half of the client credentials. It is accessible from within Partner Admin and directly identifies the Partner within Kiva’s system.
-* client_secret - this is the second half of the client credentials. Both It is accessible from within Partner Admin and is required to validate a client credentials request. client_id and client_secret should be treated as sensitive secrets.
+* **grant_type** - required. This will always have the value client_credentials.
+* **scope** - this represents the actions that within the Partner API that need to be executed. If the partner is authorized for these actions, the returned JWT will contain all authorized actions. Valid scopes are read:loans, create:loan_draft, create:journal_update, create:repayment.
+* **audience** - this identifies the audience for the JWT, which is the API where the JWT will be used.
+* **client_id** - this is the first half of the client credentials. It is accessible from within Partner Admin and directly identifies the Partner within Kiva’s system.
+* **client_secret** - this is the second half of the client credentials. Both It is accessible from within Partner Admin and is required to validate a client credentials request. client_id and client_secret should be treated as sensitive secrets.
+
 
 ### Response Data (test environment)
 On successful authentication, you should receive a response like the following:
@@ -42,19 +43,22 @@ On successful authentication, you should receive a response like the following:
 9 }
 ```
 
-* access_token - this is the bearer token that you will use to access the Partner API.
-* token_type - this indicates the type of token, this should always be bearer.
-* expires_in - number of seconds the token will be valid for (also check the exp claim inside the JWT for an expiration timestamp).
-* scope - this is an intersection between scopes that were requested and scopes that the Partner has been authorized for.
-* iss - the issuer of the JWT.
-* partnerId - the Kiva identifier for the partner. You can find your partnerId in PA2 by going to the Account > Profile page.
-* jti - the unique identifier for the token
+* **access_token** - this is the bearer token that you will use to access the Partner API.
+* **token_type** - this indicates the type of token, this should always be bearer.
+* **expires_in** - number of seconds the token will be valid for (also check the exp claim inside the JWT for an expiration timestamp).
+* **scope** - this is an intersection between scopes that were requested and scopes that the Partner has been authorized for.
+* **iss** - the issuer of the JWT.
+* **partnerId** - the Kiva identifier for the partner. You can find your partnerId in PA2 by going to the Account > Profile page.
+* **jti** - the unique identifier for the token
 
-# Partner API Authentication
+### Partner API Authentication
 Once you have received an access token, supply it as a Bearer token in the Authorization header as in the below curl example. You will need to customize two components:
 
-Insert your partner ID in the URL where it says "PARTNERID". You can find your partner ID in PA2 by going to the Account > Profile page.
-Insert the unique bearer token you received
+Insert your partner ID in the URL where it says "PARTNERID". You can find your partner ID in PA2 by going to the _Account > Profile page_.
+Insert the unique bearer token you received.
+
+### Get your account access
+Once you have an account created by a Kiva admin you can login into the management [website](https://partners.kiva.org/pa3/partner/145/api).
 
 ```
 curl --location --request GET 'https://partner-api-stage.dk1.kiva.org/v3/partner/PARTNERID/loans' \

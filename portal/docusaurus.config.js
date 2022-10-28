@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Partner API',
+  title: 'Kiva Partner API',
   tagline: 'Placing your loans in the Kiva Marketplace',
   url: 'https://fps-sdk-portal.web.app',
   baseUrl: '/',
@@ -49,9 +49,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Partner API Docs',
+        title: 'Kiva Partner API Docs',
         logo: {
-          alt: 'Partner APIo',
+          alt: 'Kiva Partner API Docs',
           src: 'img/logo.svg',
         },
         items: [

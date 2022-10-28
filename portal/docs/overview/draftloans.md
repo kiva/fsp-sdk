@@ -6,9 +6,8 @@ sidebar_position: 3
 
 We recommend that your technical team consults with the Kiva Coordinator at your organization to fully understand Kiva's Repayment Reporting process. To do so, please have your technical team review the following:
 
-* This video provides a thorough explanation on how to post an individual loan
-* This video provides a thorough explanation on how to post a group loan.
-* Visit the New Loans section for more information, specifically 
+* This [video](https://www.youtube.com/watch?v=9gScexv-yZo&amp;t=5s) provides a thorough explanation on how to post an individual loan
+* This [video](https://www.youtube.com/watch?v=KvKUScWF73M&amp;t=1s) provides a thorough explanation on how to post a group loan.
 
 Step 1: Description - Individual Loans and Step 1: Description - Group Loans
 Process
@@ -24,13 +23,13 @@ Depending on if you are posting a group or individual loan, certain fields are n
 
 If posting an individual loan, do not include any of the following fields. The following fields are required only when posting a group loan:
 
-*Group_name:* this is the name of the group that will appear on Kiva.org.
+**Group_name**: this is the name of the group that will appear on Kiva.org.
 
-*Internal_client_id:* this is the ID of each client represented within the group (for example, if a group has three members, each member might have their own client ID that should be listed here)
+**Internal_client_id**: this is the ID of each client represented within the group (for example, if a group has three members, each member might have their own client ID that should be listed here)
 
-*Internal_loan_id:* this is the ID for each individual borrower's loan (for example, a member of the group might be taking out their third loan with the organization, and that loan might have a unique ID. Enter that ID here)
+**Internal_loan_id**: this is the ID for each individual borrower's loan (for example, a member of the group might be taking out their third loan with the organization, and that loan might have a unique ID. Enter that ID here)
 
-*Not_pictured:* use this field in case any borrower is listed in Step 1: Description does not appear in the photo
+**Not_pictured**: use this field in case any borrower is listed in Step 1: Description does not appear in the photo
 
 The borrower photo can be sent to PA2 as a URL. Repayment Schedules can be sent in several different formats. If you believe a format different from the one in the example below will work better for your organization, please let Kiva know and we will provide more information.
 
