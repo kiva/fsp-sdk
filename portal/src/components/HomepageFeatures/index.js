@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Ready to Integrate',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/integrate.svg').default,
     description: (
       <>
         The Kiva Partner API was designed from the ground up to be integrated into existing financial systems
@@ -14,7 +14,7 @@ const FeatureList = [
   },
   {
     title: 'Pre-made SDKs',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/sdk.svg').default,
     description: (
       <>
         The API is supported by specialized SDKs that reduce the cost of integration. Go
@@ -24,7 +24,7 @@ const FeatureList = [
   },
   {
     title: 'Close Customer Support',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/support.svg').default,
     description: (
       <>
         Our product managers and engineers are on the ready to help your integration succeed.

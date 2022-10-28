@@ -17,6 +17,4 @@ As part of filing a bug please add:
 
 ## Contact your Support Team
 
-Every user of the API is added to a private Slack channel in the Kiva organization. 
-With the information to reproduce the bug please send a message and tag your go to
-contact.
+Please contact us at partnersupport@kiva.org and share what you can in order to reproduce.
