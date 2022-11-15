@@ -10,13 +10,13 @@
 ## Getting an authorization token example
 This example shows how to retrieve an auth token with the credentials provided.  This example 
 demostrates using `https://auth-stage.dk1.kiva.org/oauth/token` api.  
-  
-[Code](./src/demo/auth.ts)   
-1. run `npm run auth`
+   
+1. run `npm run auth`  
+[Code](./src/demo/auth.ts)
 
 ## Using the authorization token example
 This example shows how to use the auth token to make another API call, in this case getting a list of loans. This example 
 uses the auth API (as above) as well as `https://partner-api-stage.dk1.kiva.org/v3/partner/{partnerId}/loans`.  
-  
-[Code](./src/demo/get.loans.ts)    
-1. run `npm run get-loans`
+   
+1. run `npm run get-loans`  
+[Code](./src/demo/get.loans.ts)
