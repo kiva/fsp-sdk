@@ -1,4 +1,4 @@
-# fps sdk
+# Financial Partner Services sdk
 This repo is the SDK for the Financial Partners API.
 
 ## Structure
