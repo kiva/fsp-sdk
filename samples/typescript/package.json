@@ -9,21 +9,12 @@
   "scripts": {
     "lint": "eslint . --ext .ts --quiet --fix",
     "compile": "tsc",
-    "start:dev": "nodemon",
-    "unit": "jest",
     "auth": "npx ts-node ./src/demo/auth",
-    "test": "npm run compile && npm run unit",
-    "test:unit": "npm run test -- tests/unit/"
+    "get-loans": "npx ts-node ./src/demo/get.loans"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.131.0",
-    "@aws-sdk/util-dynamodb": "^3.137.0",
-    "axios": "^0.27.2",
     "dotenv": "^16.0.3",
-    "fetch": "^1.1.0",
-    "qs": "^6.11.0",
-    "querystring": "^0.2.1",
-    "uuid": "^8.3.2"
+    "fetch": "^1.1.0"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.18.6",
