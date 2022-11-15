@@ -13,6 +13,6 @@ This example shows how to retrieve an auth token with the credentials provided.
 1. run `npm run auth`
 
 ## Using the authorization token example
-This example shows how to use the auth token to make another API call, in this case getting a list of loans.
+This example shows how to use the auth token to make another API call, in this case getting a list of loans.  
 [Code](./src/demo/get.loans.ts)  
 1. run `npm run get-loans`
