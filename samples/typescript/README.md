@@ -7,6 +7,10 @@
 3. copy dummy.env to .env
 4. update .env client_id and client_secret to the values given to you by your coordinator
 
+### Assumptions
+You already have [node js and npm installed](https://nodejs.org/en/download/).  These samples were tested
+using node `18.12.1` and npm `8.19.2`.  
+
 ## Getting an authorization token example
 This example shows how to retrieve an auth token with the credentials provided.  This example 
 demostrates using `https://auth-stage.dk1.kiva.org/oauth/token` api.  
