@@ -18,5 +18,6 @@ If you have an example to contribute, please follow the following procedures:
 Click the links below to follow through to some code examples.  The examples cover topics 
 such as getting an auth token and using the auth token to make other API calls.  
 
+[Postman](./postman/README.md) queries    
 [Typescript](./typescript/README.md) examples  
 
