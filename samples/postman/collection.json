@@ -28,17 +28,17 @@
 					"urlencoded": [
 						{
 							"key": "grant_type",
-							"value": "client_credentials",
+							"value": "{{GRANT_TYPE}}",
 							"type": "text"
 						},
 						{
 							"key": "scope",
-							"value": "create:loan_draft read:loans",
+							"value": "{{SCOPE}}",
 							"type": "text"
 						},
 						{
 							"key": "audience",
-							"value": "https://partner-api-stage.dk1.kiva.org",
+							"value": "{{AUDIENCE}}",
 							"type": "text"
 						},
 						{
@@ -88,7 +88,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5BQTdIeWlxIn0.eyJhdWQiOlsiaHR0cHM6Ly9wYXJ0bmVyLWFwaS1zdGFnZS5kazEua2l2YS5vcmciXSwic2NvcGUiOlsiY3JlYXRlOmxvYW5fZHJhZnQiLCJyZWFkOmxvYW5zIl0sImlzcyI6Imh0dHBzOi8vYXV0aC1zdGFnZS5kazEua2l2YS5vcmcvIiwicGFydG5lcklkIjoiNjMiLCJleHAiOjE2Njg1ODU5MTEsImp0aSI6InBZNTJtV1dsaXgwTTFWVDlZek5SNTI3bTZRQSIsImNsaWVudF9pZCI6Imd5a3E0ekxOR3BZQm0xMzR1OXlBNWFuRTJkbDM2WlBNaiJ9.JuOBybj8Lkzmh5eyu6WZq1PBrJvfnH9OhIfUEnuQey4-BjMlAiduKeTZMfaGGlEtCfAVV6-ELCsi005QHLTvq9GdXeGflV6MFD7U-2lOPkncfxG-7jKOo2PbcYrXYh5QUXDSLmDeHi8KZdIgLA8U8vKxjxkx6bzU6InRwwZVOzG2xO-YL8YY50cu4nMv9e1iKbSMnQXxntq9MTMYLpeYF4e3LPb-JE7Hb4BVlx3scPfGRcibc4V0ga9yqHRpoxrSqM4uRTWrhqS0cgvy8q7OViSDhBA6zCzpbJXvi9yFuf0KMCwBG6XIr0ym2c2Qn7Y40INDEzSAQxhMaC_ztBncKQ",
+						"value": "{{AUTH_TOKEN}}",
 						"type": "text"
 					},
 					{
@@ -134,7 +134,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5BQTdIeWlxIn0.eyJhdWQiOlsiaHR0cHM6Ly9wYXJ0bmVyLWFwaS1zdGFnZS5kazEua2l2YS5vcmciXSwic2NvcGUiOlsiY3JlYXRlOmxvYW5fZHJhZnQiLCJyZWFkOmxvYW5zIl0sImlzcyI6Imh0dHBzOi8vYXV0aC1zdGFnZS5kazEua2l2YS5vcmcvIiwicGFydG5lcklkIjoiNjMiLCJleHAiOjE2NjgxMzgzNjEsImp0aSI6Ik02UVpxWEZCUDNFZHl4X0YyUTZhZnAtXzBLdyIsImNsaWVudF9pZCI6Imd5a3E0ekxOR3BZQm0xMzR1OXlBNWFuRTJkbDM2WlBNaiJ9.p4ftcsQ6qmiWSdgaXpSgd57lhEqcv6h0dEj7Hft4DSxi4FojTuvPI9ltm39zuNQU-P4ZfMUjFmF2n8Wrp06MjsrYqkLAECZY9k6tQiGwqp-tcAQL4CDIR3VecB2v7V2c1BSNbWwl8_eCyQN1SRS_Hl5zCEQSP744-XM1PkrOZsMctpi0uLYVXLCh-6vY22io2_y32-g377CGQOpswUrEeb9nStKsYjfCDj4n8Z5OqFlgRcaF2G_1hejhzOsFLHwoHqsFdPjc6D4BjjvTpME7pB_DxS7E-RHdFtBEtDpr-I3VMD_YNFwnjotIKhXgCRogGP3OxSGbLHfKZD2fGUkV9w'",
+						"value": "{{AUTH_TOKEN}}",
 						"type": "text"
 					},
 					{
@@ -187,15 +187,15 @@
 		},
 		{
 			"key": "GRANT_TYPE",
-			"value": "client_credentials"
+			"value": ""
 		},
 		{
 			"key": "SCOPE",
-			"value": "create:loan_draft read:loans"
+			"value": ""
 		},
 		{
 			"key": "AUDIENCE",
-			"value": "https://partner-api-stage.dk1.kiva.org"
+			"value": ""
 		},
 		{
 			"key": "AUTH_TOKEN",
