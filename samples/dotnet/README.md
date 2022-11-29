@@ -18,8 +18,11 @@
     set audience=[put your audience value here]
     set scope=[put your scope value here]
    ```
-4. navigate to the `./samples/dotnet` directory
-5. to run the authorization example, run this command ` dotnet run --project auth/auth.csproj`
+
+## Running the authorization API example   
+
+1. navigate to the `./samples/dotnet` directory
+2. to run the authorization example, run this command ` dotnet run --project auth/auth.csproj`
 
 If the environment has been setup correct, the authorization json will be printed on screen like this:
 ```
@@ -34,3 +37,7 @@ Results returned:
   "partnerId":"9999",
   "jti":"F70LMnJpXOmd4YCuPl4kZMjpG99"}
 ```
+
+## Running the list loans API example
+1. navigate to the `./samples/dotnet` directory
+2. to run the list loans example, run this command ` dotnet run --project list-loans/list-loans.csproj`
