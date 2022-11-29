@@ -38,7 +38,7 @@ const gethAuthToken = async () => {
         const encodedKey = encodeURIComponent(property);
         // @ts-ignore
         const encodedValue = encodeURIComponent(details[property]);
-        encodedFormData.push(encodedKey + "=" + encodedValue);
+        encodedFormData.push(encodedKey + '=' + encodedValue);
     }
 
     // finally turn the form encoded values into string
