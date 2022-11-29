@@ -19,7 +19,7 @@ A token will be returned in `access_token` field in the return body, formatted l
 }
 ```
 
-When sent in the API headers, it becomes the value of `Authorization` header formatted like this:
+When sent in the API headers, the value from `access_token` becomes the value of `Authorization` header formatted like this:
 ```
 bearer fFaAzZciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5BQTdIeWlxIn0.eyJhdWQiOlsiaHR0cHM6Ly9wYXJ0bmVyLWFwaS1zdGFnZS5kazEua2l2YS5vcmciXSwic2NvcGUiOlsicmVhZDpsb2FucyJdLCJpc3MiOiJodHRwczovL2F1dGgtc3RhZ2UuZGsxLmtpdmEub3JnLyIsInBhcnRuZXJJZCI6IjYzIiwiZXhwIjoxNjY5Nzc4MjQyLCJqdGkiOiJRczRxb09KeUM2dndrTDFGb1hPUnhmcXdOaXMiLCJjbGllbnRfaWQiOiJneWtxNHpMTkdwWUJtMTM0dTl5QTVhbkUyZGwzNlpQTWoifQ.YmCB_ODPiaVwh-qOzeuYRzfiO5jbw0sBuFEnijX0S_TgwzIOuwtgOvJh0H0kKU3BrJOYAW0ZVXaqc6nW5wsPpS21zptwUFiVMzXQhj97bk4hcox8H-CeI__32wbWomsc7c1hcxzoyFpfaoeTP6pLB0XoUlb6ynrhCKGUIWgv2P9hE79lBM7mk0ZczCsnyw5sB-0_FP_yI4a_IVIk2dYJZqIu49zptgIg1nnCdiA1YlzVGe9YInEcOiVm2DD8BkTKlOBkT1C-YlxudcMx8IPAP5Cq-JAWCFRwDLT-JvpXQUpbTSGAdFJt0AXozvtnmmwOvfvCiUxusncjaiUcQpqFag
 ```
