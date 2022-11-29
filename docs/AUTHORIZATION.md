@@ -29,7 +29,7 @@ bearer fFaAzZciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik5BQTdIeWlxIn0.eyJhdWQiOlsia
 
 We have provided some sample code which demonstrates getting and using the OAuth token.
 
-[Typescript](../samples/typescript/README.md) | [PostMan](../samples/postman/README.md)
+[Typescript](../samples/typescript/README.md) | [PostMan](../samples/postman/README.md) | [C#](../samples/dotnet/README.md)
 
 ## Errors
 
