@@ -38,6 +38,6 @@ Results returned:
   "jti":"F70LMnJpXOmd4YCuPl4kZMjpG99"}
 ```
 
-## Running the list loans API example
+## Running the get loans API example
 1. navigate to the `./samples/dotnet` directory
-2. to run the list loans example, run this command ` dotnet run --project list-loans/list-loans.csproj`
+2. to run the list loans example, run this command ` dotnet run --project get.loans/get.loans.csproj`

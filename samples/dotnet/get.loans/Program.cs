@@ -1,6 +1,6 @@
 ﻿using System.Net.Http.Headers;
 using System.Net;
-
+using System.Text.Json;
 
 
 /*
@@ -9,6 +9,7 @@ using System.Net;
 
 string PartnerId = "";
 string BearerToken = "";
+
 
 
 /*
@@ -33,11 +34,15 @@ async Task GetAuthorizationToken()
 
     var response = await client.PostAsync("https://auth-stage.dk1.kiva.org/oauth/token", encodedContent);
 
-    if (response.StatusCode == HttpStatusCode.OK) {
-        var json = await response.Content.ReadAsStringAsync();
-        Console.WriteLine($"\r\nResults returned: \r\n {json}\r\n");
-
+    if (response.StatusCode == HttpStatusCode.OK)
+    {
+        using Stream responseBody = await response.Content.ReadAsStreamAsync();
+        var kivaAuthorization = await JsonSerializer.DeserializeAsync<KivaAuthorization>(responseBody);
+        
         // TODO: parse out auth token and partner id
+        PartnerId = kivaAuthorization.PartnerId;
+        BearerToken = kivaAuthorization.AuthToken;
+
     } else {
         Console.WriteLine($"error: {response.StatusCode}");
         System.Environment.Exit(1);
