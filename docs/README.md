@@ -1,3 +1,3 @@
 # Documentation
 
-TBD
+[Understanding Authorization](./AUTHORIZATION.md)    
