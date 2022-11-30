@@ -2,19 +2,14 @@
 sidebar_position: 1
 ---
 
-# Fill a Bug
+# Reportar un fallo
+Conoce la forma más eficaz de reportar un fallo.
 
-Let's discover the most effective way to ** Fill a bug**.
+## Compartir toda la información de reproducción
+La mayor parte de tu trabajo con la API se realizará a través de una solicitud HTTP. Al reportar un error, por favor, añade:
+URL completa de la operación de la API.
+Método HTTP utilizado.
+Token utilizado.
 
-## Sharing All Reproduction Information
-
-Most of your work with the Partner API will happen via an HTTP request.
-As part of filing a bug please add:
-
-* Full URL of the API action.
-* HTTP Method used.
-* Token used.
-
-## Contact your Support Team
-
-Please contact us at partnersupport@kiva.org and share what you can in order to reproduce.
+## Póngase en contacto con el equipo de soporte para socios
+Póngase en contacto con nosotros en `partnersupport@kiva.org` o a través del canal de Slack creado para su integracón y proporcione todos los datos posibles sobre el error.
