@@ -2,21 +2,12 @@
 sidebar_position: 1
 ---
 
-# Change Log
+# Registro de modificaciones
+Manténgase al tanto de todos los cambios realizados a la API para socios de Kiva.
+Este registro de cambios enumera todas las adiciones y actualizaciones realizadas a la API para socios de Kiva, en orden cronológico..
 
-** Keep track of changes to the Kiva Partner API. **
-
-This changelog lists all additions and updates to the Kiva Partner API, in chronological order.
-
-## September 30, 2022
-1. Released updated documentation portal.
-
-## September 26, 2022
-1. Image Upload Improvements for Loan Drafting: The `loan_draft` endpoint now accepts an `image_encoded` field, and the `image_url` field has been **deprecated**.
-
-### Additional Details
-
-#### Image upload improvements for Loan Drafting
-Historically, Kiva accepts borrower images in the `image_url` field. **In order to protected the privacy of our borrowers, we recommend our partners update their implementations to send the image through the `image_encoded` field**. To maintain compatibility, `image_url` will continue to be supported, but it will be removed from the official documentation.
-
-This new field accepts a base64-encoded binary image string. Base64 encoding is a common way for transforming binary data into text so that it can be passed through a text-based protocol, i.e. HTTP with a content-type of `application/json`. You can find more documentation on this field on the Model section of our [Swagger UI page for drafting loans](https://partner-api.k1.kiva.org/swagger-ui/#/partners/loanDraftRouteUsingPOST).
+## Septiembre 30 de 2022
+1. Publicación del portal de documentación actualizado
+. 
+## Septiembre 26 de 2022
+1. Mejora en la compatibilidad de los cuerpos de imagen
