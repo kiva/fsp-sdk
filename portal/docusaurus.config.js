@@ -55,6 +55,11 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+           /* this language menu doesn't work right */
+          {
+            type: 'localeDropdown',
+            position: 'left',
+          },
           {
             type: 'doc',
             docId: 'overview/overview',

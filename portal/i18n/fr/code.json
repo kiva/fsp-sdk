@@ -253,5 +253,26 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
+  },
+  "The Kiva Partner API was designed from the ground up to be integrated into existing financial systems": {
+    "message": "The Kiva Partner API was designed from the ground up to be integrated into existing financial systems"
+  },
+  "The API is supported by specialized SDKs that reduce the cost of integration. Go ahead and find the one that matches your existing tech stack.": {
+    "message": "The API is supported by specialized SDKs that reduce the cost of integration. Go ahead and find the one that matches your existing tech stack."
+  },
+  "Our product managers and engineers are on the ready to help your integration succeed.": {
+    "message": "Our product managers and engineers are on the ready to help your integration succeed."
+  },
+  "nav1": {
+    "message": "The Kiva Partner API was designed from the ground up to be integrated into existing financial systems",
+    "description": "none"
+  },
+  "nav2": {
+    "message": "The API is supported by specialized SDKs that reduce the cost of integration. Go ahead and find the one that matches your existing tech stack.",
+    "description": "none"
+  },
+  "nav3": {
+    "message": "Our product managers and engineers are on the ready to help your integration succeed.",
+    "description": "none"
   }
 }

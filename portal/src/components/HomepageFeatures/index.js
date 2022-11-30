@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import Translate, {translate} from '@docusaurus/Translate';
 
 const FeatureList = [
   {
@@ -8,7 +9,9 @@ const FeatureList = [
     Svg: require('@site/static/img/integrate.svg').default,
     description: (
       <>
-        The Kiva Partner API was designed from the ground up to be integrated into existing financial systems
+        <Translate id="nav1" description="none">
+            The Kiva Partner API was designed from the ground up to be integrated into existing financial systems
+        </Translate>
       </>
     ),
   },
@@ -17,8 +20,9 @@ const FeatureList = [
     Svg: require('@site/static/img/sdk.svg').default,
     description: (
       <>
-        The API is supported by specialized SDKs that reduce the cost of integration. Go
-        ahead and find the one that matches your existing tech stack.
+          <Translate id="nav2" description="none">
+              The API is supported by specialized SDKs that reduce the cost of integration. Go ahead and find the one that matches your existing tech stack.
+          </Translate>
       </>
     ),
   },
@@ -27,7 +31,9 @@ const FeatureList = [
     Svg: require('@site/static/img/support.svg').default,
     description: (
       <>
-        Our product managers and engineers are on the ready to help your integration succeed.
+          <Translate id="nav3" description="none">
+                Our product managers and engineers are on the ready to help your integration succeed.
+          </Translate>
       </>
     ),
   },
