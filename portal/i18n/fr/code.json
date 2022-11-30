@@ -264,15 +264,27 @@
     "message": "Our product managers and engineers are on the ready to help your integration succeed."
   },
   "nav1": {
-    "message": "The Kiva Partner API was designed from the ground up to be integrated into existing financial systems",
+    "message": "L'API des partenaires Kiva a été pensée pour être intégrée aux systèmes financiers existants.",
     "description": "none"
   },
   "nav2": {
-    "message": "The API is supported by specialized SDKs that reduce the cost of integration. Go ahead and find the one that matches your existing tech stack.",
+    "message": "L'API est appuyée par des SDK spécialisés qui réduisent le coût de l'intégration. Trouvez celui qui correspond à votre cadre technologique actuel.",
     "description": "none"
   },
   "nav3": {
-    "message": "Our product managers and engineers are on the ready to help your integration succeed.",
+    "message": "Nos chefs de produit et nos ingénieurs sont plus que prêts à aider votre intégration à réussir.",
     "description": "none"
+  },
+  "nav-title-1": {
+    "message": "Prêt pour l'intégration"
+  },
+  "nav-title-2": {
+    "message": "Projets de SDKs"
+  },
+  "nav-title-3": {
+    "message": "Soutien continu aux partenaires"
+  },
+  "app-tutorial-button": {
+    "message": "Introduction Tutorial - 15 min ⏱"
   }
 }

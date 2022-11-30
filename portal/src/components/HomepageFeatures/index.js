@@ -5,7 +5,7 @@ import Translate, {translate} from '@docusaurus/Translate';
 
 const FeatureList = [
   {
-    title: 'Ready to Integrate',
+    title: translate({message: 'Ready to Integrate', id: 'nav-title-1'}),
     Svg: require('@site/static/img/integrate.svg').default,
     description: (
       <>
@@ -16,7 +16,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Pre-made SDKs',
+    title: translate({message: 'Pre-made SDKs', id: 'nav-title-2'}),
     Svg: require('@site/static/img/sdk.svg').default,
     description: (
       <>
@@ -27,7 +27,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Close Customer Support',
+    title: translate({message: 'Close Customer Support', id: 'nav-title-3'}),
     Svg: require('@site/static/img/support.svg').default,
     description: (
       <>
