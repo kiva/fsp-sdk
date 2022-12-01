@@ -1,10 +1,10 @@
 {
   "title": {
-    "message": "Kiva Partner API Docs",
+    "message": "API Para los Socios de Kiva",
     "description": "The title in the navbar"
   },
   "item.label.Introduction": {
-    "message": "Introduction",
+    "message": "Tutorial de introducción",
     "description": "Navbar item with label Introduction"
   },
   "item.label.API Reference": {

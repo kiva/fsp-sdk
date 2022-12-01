@@ -1,32 +1,32 @@
 {
   "app-title": {
-    "message": "Kiva Partner API"
+    "message": "API Para los Socios de Kiva"
   },
   "app-tagline": {
-    "message": "Placing your loans in the Kiva Marketplace"
+    "message": "Colocar sus préstamos en el sitio web de Kiva"
   },
   "app-tutorial-button": {
     "message": "Introduction Tutorial - 15 min ⏱"
   },
   "home-page-title-1": {
-    "message": "Ready to Integrate"
+    "message": "Listos para la integración"
   },
   "home-page-1": {
-    "message": "The Kiva Partner API was designed from the ground up to be integrated into existing financial systems",
+    "message": "La API de Kiva Partner fue diseñada para ser integrada en los sistemas financieros existentes",
     "description": "none"
   },
   "home-page-title-2": {
-    "message": "Pre-made SDKs"
+    "message": "Plantillas de SDKs"
   },
   "home-page-2": {
-    "message": "The API is supported by specialized SDKs that reduce the cost of integration. Go ahead and find the one that matches your existing tech stack.",
+    "message": "La API se apoya con SDKs especializados que reducen el coste de la integración. Busca el que se adapte a tu actual estructura tecnológica.",
     "description": "none"
   },
   "home-page-title-3": {
-    "message": "Close Customer Support"
+    "message": "Continua atención al socio"
   },
   "home-page-3": {
-    "message": "Our product managers and engineers are on the ready to help your integration succeed.",
+    "message": "Nuestros gestores de productos e ingenieros están preparados para ayudar a que su integración tenga éxito.",
     "description": "none"
   },
   "theme.ErrorPageContent.title": {
