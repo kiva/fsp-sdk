@@ -8,37 +8,44 @@ import Translate, {translate} from '@docusaurus/Translate';
 
 import styles from './index.module.css';
 
-
-
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{translate({message: siteConfig.title, id: 'app-title'})}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/overview">
-              {translate({message: 'Introduction Tutorial - 15 min ⏱', id: 'app-tutorial-button'})}️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
+    /*
+    this does not work and didn't want to take the time to figure it out
+    const {siteConfig} = useDocusaurusContext();
+    const {appTitle} = translate({message: siteConfig.title, id: 'app-title'});
+    const {appTagLine} = translate({message: siteConfig.tagline, id: 'app-tagline'});
+    */
+    const {appTitle} = translate({message: 'Kiva Partner API', id: 'app-title'});
+    const {appTagLine} = translate({message: 'Placing your loans in the Kiva Marketplace', id: 'app-tagline'});
+    const {tutorial} = translate({message: 'Introduction Tutorial - 15 min ⏱', id: 'app-tutorial-button'});
+
+    return (
+        <header className={clsx('hero hero--primary', styles.heroBanner)}>
+          <div className="container">
+            <h1 className="hero__title">{appTitle}</h1>
+            <p className="hero__subtitle">{appTagLine}</p>
+            <div className={styles.buttons}>
+              <Link
+                className="button button--secondary button--lg"
+                to="/docs/overview">
+                  {tutorial}️
+              </Link>
+            </div>
+          </div>
+        </header>
+      );
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-      title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
-    </Layout>
-  );
+    const {appTitle} = translate({message: 'Kiva Partner API', id: 'app-title'});
+    return (
+        <Layout
+          title={`${appTitle}`}
+          description="Description will go into a meta tag in <head />">
+          <HomepageHeader />
+          <main>
+            <HomepageFeatures />
+          </main>
+        </Layout>
+    );
 }
