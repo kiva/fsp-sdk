@@ -20,7 +20,7 @@ This command starts a local development server and opens up a browser window. Mo
 
 Rebuild for a language first.  This example rebuilds French.  To rebuild a different language, replace `fr` with the appropriate language code.
 ```
-yarn run start -- --locale fr
+yarn run write-translations -- --locale fr
 ```
 
 This example tests French.  To test a different language, replace `fr` with the appropriate language code.
