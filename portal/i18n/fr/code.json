@@ -1,4 +1,34 @@
 {
+  "app-title": {
+    "message": "API pour les partenaires de Kiva"
+  },
+  "app-tagline": {
+    "message": "Placement de vos prêts sur le site Web de Kiva"
+  },
+  "app-tutorial-button": {
+    "message": "Introduction Tutorial - 15 min ⏱"
+  },
+  "home-page-title-1": {
+    "message": "Prêt pour l'intégration"
+  },
+  "home-page-1": {
+    "message": "L'API des partenaires Kiva a été pensée pour être intégrée aux systèmes financiers existants",
+    "description": "none"
+  },
+  "home-page-title-2": {
+    "message": "Projets de SDKs"
+  },
+  "home-page-2": {
+    "message": "L'API est appuyée par des SDK spécialisés qui réduisent le coût de l'intégration. Trouvez celui qui correspond à votre cadre technologique actuel.",
+    "description": "none"
+  },
+  "home-page-title-3": {
+    "message": "Soutien continu aux partenaires"
+  },
+  "home-page-3": {
+    "message": "Nos chefs de produit et nos ingénieurs sont plus que prêts à aider votre intégration à réussir.",
+    "description": "none"
+  },
   "theme.ErrorPageContent.title": {
     "message": "Cette page a planté.",
     "description": "The title of the fallback page when the page crashed"
@@ -19,6 +49,18 @@
     "message": "Veuillez contacter le propriétaire du site qui vous a lié à l'URL d'origine et leur faire savoir que leur lien est cassé.",
     "description": "The 2nd paragraph of the 404 page"
   },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Retour au début de la page",
+    "description": "The ARIA label for the back to top button"
+  },
+  "theme.blog.archive.title": {
+    "message": "Archive",
+    "description": "The page & hero title of the blog archive page"
+  },
+  "theme.blog.archive.description": {
+    "message": "Archive",
+    "description": "The page & hero description of the blog archive page"
+  },
   "theme.admonition.note": {
     "message": "remarque",
     "description": "The default label used for the Note admonition (:::note)"
@@ -38,18 +80,6 @@
   "theme.admonition.caution": {
     "message": "attention",
     "description": "The default label used for the Caution admonition (:::caution)"
-  },
-  "theme.blog.archive.title": {
-    "message": "Archive",
-    "description": "The page & hero title of the blog archive page"
-  },
-  "theme.blog.archive.description": {
-    "message": "Archive",
-    "description": "The page & hero description of the blog archive page"
-  },
-  "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Retour au début de la page",
-    "description": "The ARIA label for the back to top button"
   },
   "theme.blog.paginator.navAriaLabel": {
     "message": "Pagination de la liste des articles du blog",
@@ -99,6 +129,10 @@
     "message": "mode clair",
     "description": "The name for the light color mode"
   },
+  "theme.docs.DocCard.categoryDescription": {
+    "message": "{count} éléments",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
   "theme.docs.breadcrumbs.home": {
     "message": "Page d'accueil",
     "description": "The ARIA label for the home page in the breadcrumbs"
@@ -106,10 +140,6 @@
   "theme.docs.breadcrumbs.navAriaLabel": {
     "message": "Fil d'Ariane",
     "description": "The ARIA label for the breadcrumbs"
-  },
-  "theme.docs.DocCard.categoryDescription": {
-    "message": "{count} éléments",
-    "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.docs.paginator.navAriaLabel": {
     "message": "Pagination des documents",
@@ -253,38 +283,5 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
-  },
-  "The Kiva Partner API was designed from the ground up to be integrated into existing financial systems": {
-    "message": "The Kiva Partner API was designed from the ground up to be integrated into existing financial systems"
-  },
-  "The API is supported by specialized SDKs that reduce the cost of integration. Go ahead and find the one that matches your existing tech stack.": {
-    "message": "The API is supported by specialized SDKs that reduce the cost of integration. Go ahead and find the one that matches your existing tech stack."
-  },
-  "Our product managers and engineers are on the ready to help your integration succeed.": {
-    "message": "Our product managers and engineers are on the ready to help your integration succeed."
-  },
-  "nav1": {
-    "message": "L'API des partenaires Kiva a été pensée pour être intégrée aux systèmes financiers existants.",
-    "description": "none"
-  },
-  "nav2": {
-    "message": "L'API est appuyée par des SDK spécialisés qui réduisent le coût de l'intégration. Trouvez celui qui correspond à votre cadre technologique actuel.",
-    "description": "none"
-  },
-  "nav3": {
-    "message": "Nos chefs de produit et nos ingénieurs sont plus que prêts à aider votre intégration à réussir.",
-    "description": "none"
-  },
-  "nav-title-1": {
-    "message": "Prêt pour l'intégration"
-  },
-  "nav-title-2": {
-    "message": "Projets de SDKs"
-  },
-  "nav-title-3": {
-    "message": "Soutien continu aux partenaires"
-  },
-  "app-tutorial-button": {
-    "message": "Introduction Tutorial - 15 min ⏱"
   }
 }

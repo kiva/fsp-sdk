@@ -5,33 +5,33 @@ import Translate, {translate} from '@docusaurus/Translate';
 
 const FeatureList = [
   {
-    title: translate({message: 'Ready to Integrate', id: 'nav-title-1'}),
+    title: translate({message: 'Ready to Integrate', id: 'home-page-title-1'}),
     Svg: require('@site/static/img/integrate.svg').default,
     description: (
       <>
-        <Translate id="nav1" description="none">
+        <Translate id="home-page-1" description="none">
             The Kiva Partner API was designed from the ground up to be integrated into existing financial systems
         </Translate>
       </>
     ),
   },
   {
-    title: translate({message: 'Pre-made SDKs', id: 'nav-title-2'}),
+    title: translate({message: 'Pre-made SDKs', id: 'home-page-title-2'}),
     Svg: require('@site/static/img/sdk.svg').default,
     description: (
       <>
-          <Translate id="nav2" description="none">
+          <Translate id="home-page-2" description="none">
               The API is supported by specialized SDKs that reduce the cost of integration. Go ahead and find the one that matches your existing tech stack.
           </Translate>
       </>
     ),
   },
   {
-    title: translate({message: 'Close Customer Support', id: 'nav-title-3'}),
+    title: translate({message: 'Close Customer Support', id: 'home-page-title-3'}),
     Svg: require('@site/static/img/support.svg').default,
     description: (
       <>
-          <Translate id="nav3" description="none">
+          <Translate id="home-page-3" description="none">
                 Our product managers and engineers are on the ready to help your integration succeed.
           </Translate>
       </>

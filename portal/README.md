@@ -18,7 +18,12 @@ This command starts a local development server and opens up a browser window. Mo
 
 ### Testing a specific language
 
-This example tests French.  To test a different langage, replace `fr` with the appropriate language code.
+Rebuild for a language first.  This example rebuilds French.  To rebuild a different language, replace `fr` with the appropriate language code.
+```
+yarn run start -- --locale fr
+```
+
+This example tests French.  To test a different language, replace `fr` with the appropriate language code.
 ```
 yarn run start -- --locale fr
 ```
