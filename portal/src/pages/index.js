@@ -10,25 +10,33 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
     /*
-    this does not work and didn't want to take the time to figure it out
+    this does not work
     const {siteConfig} = useDocusaurusContext();
     const {appTitle} = translate({message: siteConfig.title, id: 'app-title'});
     const {appTagLine} = translate({message: siteConfig.tagline, id: 'app-tagline'});
-    */
+
+    nor does this work
+
     const {appTitle} = translate({message: 'Kiva Partner API', id: 'app-title'});
     const {appTagLine} = translate({message: 'Placing your loans in the Kiva Marketplace', id: 'app-tagline'});
     const {tutorial} = translate({message: 'Introduction Tutorial - 15 min ⏱', id: 'app-tutorial-button'});
 
+    console.log(appTitle);
+    console.log(appTagLine);
+    console.log(tutorial);
+    */
+
+    const {siteConfig} = useDocusaurusContext();
     return (
         <header className={clsx('hero hero--primary', styles.heroBanner)}>
           <div className="container">
-            <h1 className="hero__title">{appTitle}</h1>
-            <p className="hero__subtitle">{appTagLine}</p>
+            <h1 className="hero__title">{siteConfig.title}</h1>
+            <p className="hero__subtitle">{siteConfig.description}</p>
             <div className={styles.buttons}>
               <Link
                 className="button button--secondary button--lg"
                 to="/docs/overview">
-                  {tutorial}️
+                  {translate({message: 'Introduction Tutorial - 15 min ⏱', id: 'app-tutorial-button'})}️
               </Link>
             </div>
           </div>
@@ -37,10 +45,10 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-    const {appTitle} = translate({message: 'Kiva Partner API', id: 'app-title'});
+    const {siteConfig} = useDocusaurusContext();
     return (
         <Layout
-          title={`${appTitle}`}
+          title={`${siteConfig.title}`}
           description="Description will go into a meta tag in <head />">
           <HomepageHeader />
           <main>
