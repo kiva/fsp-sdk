@@ -4,29 +4,30 @@ sidebar_position: 4
 
 # Using the API loans fetch endpoint
 
-## Process
-A query for information is sent to PA2 via the API
-There are 4 search request parameters you can send: query, status, offset, and limit
+## Proceso
 
-**Query**: can be any string that would be typed into the search bar in PA2 (e.g. name, Loan ID, Client ID or Kiva ID)
+* Se envía una consulta de información a PA2 a través de la API.
+* Hay 4 parámetros de solicitud de búsqueda que puede enviar: query, status, offset y limit
+* * Query: puede ser cualquier línea que se escriba en la barra de búsqueda de PA2 (por ejemplo, nombre, ID de préstamo, ID de cliente o ID de Kiva)
+* * Status: puede ser uno de los siguientes:
+* * * refunded
+* * * inactive
+* * * inactive_expired
+* * * fundRaising
+* * * expired
+* * * raised
+* * * payingBack
+* * * ended
+* * * reviewed
+* * * issue
+* * * defaulted
+* * Offset & limit (“offset”, “limit”): funciona igual que cualquier paginación, offset es la distancia que hay que recorrer en la lista y limit es el número de resultados que hay que devolver. Así que para obtener las primeras 20 coincidencias sería offset=0, limit=20 y las siguientes 20 serían offset=20 limit=20, etc..  El valor por defecto es offset=0 y limit=20.
+* * * No recomendamos solicitar más de 300, ya que el volumen de datos puede llegar a ser muy grande y limitar los recursos del servidor.
+* Después de realizar la solicitud, la respuesta de la API se devolverá en formato JSON
 
-**Status**: can be one of the following:
-refunded
-inactive
-inactive_expired
-fundRaising
-expired
-raised
-payingBack
-ended
-reviewed
-issue
-defaulted
+## Documentación técnica
 
-Offset & limit (“offset”, “limit”): works the same as any pagination, offset is how far into the list to go and limit is how many results to return. So to get the first 20 matches it would be offset=0, limit=20 and the next 20 would be offset=20 limit=20, etc.. The default is offset=0 and limit=20.
-We don’t recommend requesting more than 300, because the volume of data can become very large and constrain server resources
-After making the request, the response from the API will be returned in JSON format
-Technical documentation
-All of Kiva's technical documentation, including endpoints, can be found here:
-Test environment (Stage): https://partner-api-stage.dk1.kiva.org/swagger-ui/
-Production (to use after testing): https://partner-api.k1.kiva.org/swagger-ui/
+* Toda la documentación técnica de Kiva, incluyendo los puntos finales, se puede encontrar aquí:
+* * Entorno de pruebas (Stage): https://partner-api-stage.dk1.kiva.org/swagger-ui/
+* * Producción (para usar después de las pruebas): https://partner-api.k1.kiva.org/swagger-ui/
+on (to use after testing): https://partner-api.k1.kiva.org/swagger-ui/

@@ -2,33 +2,26 @@
 sidebar_position: 6
 ---
 
-# Using the API to post journals
+# Utilización de la API para publicar seguimientos
 
 
-We recommend that your technical team consults with the Kiva Coordinator at your organization to fully understand Kiva's Repayment Reporting process. To do so, please have your technical team review the following:
+Recomendamos que su equipo técnico consulte al coordinador Kiva en su organización para entender completamente el proceso de elaboración de seguimientos Para ello, solicite a su equipo técnico que revise lo siguiente:
 
-This video provides a thorough explanation on how to post journals
+* [Este vídeo](https://www.youtube.com/watch?v=9KrerX22pQQ) proporciona una explicación exhaustiva sobre cómo publicar seguimientos.
+* Visita la sección “[Seguimientos](https://kivapartnerhelpcenter.zendesk.com/hc/es/categories/360001945772-Entradas-de-Seguimiento)” para más información.
 
-[![What is a journal?](https://img.youtube.com/vi/irTYtMImrAw/0.jpg)](https://www.youtube.com/watch?v=irTYtMImrAw)
+## Proceso
+* La información de un nuevo seguimiento se envía desde el SIG a PA2 a través de la API.
+* La API devolverá una respuesta JSON con una confirm_url.
+* Una persona tiene que ir a la confirm_url y publicar el borrador del seguimiento.
 
-## Process
+## Información adicional
+* Para los socios que utilizan el formato de dos columnas para los informes de reembolso y el registro de seguimientos, sólo se necesita el ID del préstamo (internal_loan_id). Para los socios que utilizan el formato de tres columnas, se necesita tanto el ID del préstamo (internal_loan_ID) como el ID del cliente (internal_client_ID). Esto se puede verificar yendo a PA2 -> Cuenta -> Perfil -> Formato de carga del CSV.
+* Cuando pruebe la conexión de la API para los seguimientos, por favor, utilice la información de un cliente/prestatario real que haya sido publicado en Kiva. No utilice la misma información de cliente utilizada para publicar un borrador de préstamo de prueba, ya que PA2 no registrará a este prestatario como elegible para una actualización del seguimiento.
+* * Para encontrar un prestatario de Kiva existente, haga clic en la pestaña "Seguimientos" en PA2. Esto le llevará a un informe de todos los clientes de Kiva que son elegibles para un seguimiento. Seleccione cualquiera de los ID de cliente y préstamo de estos clientes para enviarlos a través de la API.
+* * El contenido del seguimiento puede ser el que usted desee. El coordinador de Kiva sigue teniendo que entrar en PA2 para revisar los seguimientos antes de enviarlos.
 
-Information for a new journal is sent from MIS to PA2 via the API
-The API will return a JSON response with a **confirm_url**.
-
-A person needs to go to the **confirm_url** and actually publish the journal draft
-Additional information
-
-For partners who use the two column format for repayment reporting and journaling, only the Loan ID (internal_loan_id) is needed. For partners that use the three column format, both the Loan ID (internal_loan_ID) and Client ID (internal_client_ID) are needed. 
-
-This can be checked by going to _PA2 -> Account -> Profile -> CSV upload format_. When testing the API connection for journals, please use information of a real client/borrower that has been posted to Kiva. 
-
-Do not use the same client information used to post a test loan draft as PA2 will not register this borrower as eligible for a journal update.
-
-To find an existing Kiva borrower, click on the “Journals” tab in PA2. This will take you to a report of all Kiva clients who are eligible for a journal. Select any of the client and loan IDs for these clients to send via the API.
-The content of the journal can be whatever you'd like it to be. 
-
-The Kiva Coordinator is still required to log into PA2 to review journals before submitting them.
-Technical documentation
-
-All of Kiva's technical documentation, including endpoints, can be found [here](https://partner-api.k1.kiva.org/swagger-ui/):
+## Documentación técnica
+Toda la documentación técnica de Kiva, incluidos los puntos finales, puede encontrarse aquí:
+* Entorno de prueba (Stage): https://partner-api-stage.dk1.kiva.org/swagger-ui/
+* Producción (Para usar después de las pruebas): https://partner-api.k1.kiva.org/swagger-ui/

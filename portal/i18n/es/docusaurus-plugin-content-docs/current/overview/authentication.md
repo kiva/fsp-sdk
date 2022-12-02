@@ -4,10 +4,11 @@ sidebar_position: 3
 
 # API authentication
 
-The following instructions are for authenticating with Kiva's test environment, Stage. This is the first step in any API integration. If you have already completed your testing, and your tests have been approved by Kiva, follow the instructions on the page called "Authenticating to Kiva's production environment (AFTER testing)"
-The new Partner API is accessible using an Oauth2 JWT obtained from Kiva’s auth service following Oauth2 Client Credentials flow. More simply, this is an exchange of the Partner’s client credentials for a limited lifespan token that can be used for authentication and authorization.
+Las siguientes instrucciones son para autenticarse en el entorno de pruebas de Kiva, Stage. Este es el primer paso en cualquier integración de la API. Si ya ha completado sus pruebas, y sus pruebas han sido aprobadas por Kiva, siga las instrucciones de la sección "Autenticación en el entorno de producción de Kiva (DESPUÉS de las pruebas)".
 
-### Sample Request (test environment)
+Se puede acceder a la nueva API de socios mediante un Oauth2 JWT obtenido del servicio de autenticación de Kiva siguiendo el flujo de credenciales de cliente Oauth2. De forma más sencilla, se trata de un cambio de las credenciales de cliente del socio por un token de duración limitada que puede utilizarse para autenticarse y autorizarse.
+
+### Solicitud de muestra (entorno de prueba)
 
 ```json
 1 curl --location --request POST 'https://auth-stage.dk1.kiva.org/oauth/token' \
@@ -21,15 +22,15 @@ The new Partner API is accessible using an Oauth2 JWT obtained from Kiva’s aut
 ```
 
 ### Post Data
-* **grant_type** - required. This will always have the value client_credentials.
-* **scope** - this represents the actions that within the Partner API that need to be executed. If the partner is authorized for these actions, the returned JWT will contain all authorized actions. Valid scopes are read:loans, create:loan_draft, create:journal_update, create:repayment.
-* **audience** - this identifies the audience for the JWT, which is the API where the JWT will be used.
-* **client_id** - this is the first half of the client credentials. It is accessible from within Partner Admin and directly identifies the Partner within Kiva’s system.
-* **client_secret** - this is the second half of the client credentials. Both It is accessible from within Partner Admin and is required to validate a client credentials request. client_id and client_secret should be treated as sensitive secrets.
+* **grant_type** - required. Siempre tendrá el valor client_credentials.
+* **scope** - representa las acciones que dentro de la API del socio deben ser ejecutadas. Si el socio está autorizado para estas acciones, el JWT devuelto contendrá todas las acciones autorizadas. Los scopes válidos son read:loans, create:loan_draft, create:journal_update, create:repayment.
+* **audience** - identifica la audiencia del JWT, que es la API donde se utilizará el JWT.
+* **client_id** - es la primera mitad de las credenciales del cliente. Es accesible desde Partner Admin e identifica directamente al socio dentro del sistema de Kiva.
+* **client_secret** - esta es la segunda mitad de las credenciales del cliente. Se puede acceder a ella desde Partner Admin y es necesaria para validar una solicitud de credenciales de cliente. client_id y client_secret deben tratarse como secretos sensibles.
 
 
-### Response Data (test environment)
-On successful authentication, you should receive a response like the following:
+### Datos de respuesta (entorno de prueba)
+Si la autenticación es exitosa, debería recibir una respuesta como la siguiente:
 
 ```json
 1 {
