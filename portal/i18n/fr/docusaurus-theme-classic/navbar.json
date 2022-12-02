@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "API pour les partenaires de Kiva",
+    "description": "The title in the navbar"
+  },
+  "item.label.Introduction": {
+    "message": "Tutoriel d'introduction",
+    "description": "Navbar item with label Introduction"
+  },
+  "item.label.API Reference": {
+    "message": "API Reference",
+    "description": "Navbar item with label API Reference"
+  },
+  "item.label.SDKs": {
+    "message": "SDKs",
+    "description": "Navbar item with label SDKs"
+  },
+  "item.label.Start Your Integration": {
+    "message": "Start Your Integration",
+    "description": "Navbar item with label Start Your Integration"
+  }
+}

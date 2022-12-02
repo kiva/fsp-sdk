@@ -16,6 +16,18 @@ $ yarn start
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
+### Testing a specific language
+
+Rebuild for a language first.  This example rebuilds French.  To rebuild a different language, replace `fr` with the appropriate language code.
+```
+yarn run write-translations -- --locale fr
+```
+
+This example tests French.  To test a different language, replace `fr` with the appropriate language code.
+```
+yarn run start -- --locale fr
+```
+
 ### Build
 
 ```

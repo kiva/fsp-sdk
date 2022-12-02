@@ -10,7 +10,7 @@ const config = {
   tagline: 'Placing your loans in the Kiva Marketplace',
   url: 'https://fps-sdk-portal.web.app',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
@@ -24,7 +24,7 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'es', 'fr'],
   },
 
   presets: [
@@ -55,6 +55,11 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
+           /* this language menu doesn't work right */
+          {
+            type: 'localeDropdown',
+            position: 'left',
+          },
           {
             type: 'doc',
             docId: 'overview/overview',
