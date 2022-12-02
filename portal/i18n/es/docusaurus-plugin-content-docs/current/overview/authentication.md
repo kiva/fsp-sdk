@@ -2,9 +2,9 @@
 sidebar_position: 3
 ---
 
-# API authentication
+# Autenticación en la API
 
-Las siguientes instrucciones son para autenticarse en el entorno de pruebas de Kiva, Stage. Este es el primer paso en cualquier integración de la API. Si ya ha completado sus pruebas, y sus pruebas han sido aprobadas por Kiva, siga las instrucciones de la sección "Autenticación en el entorno de producción de Kiva (DESPUÉS de las pruebas)".
+Las siguientes instrucciones son para autenticarse en el entorno de pruebas de Kiva, Stage. Este es el primer paso en cualquier integración de la API. Si ya ha completado sus pruebas, y sus pruebas han sido aprobadas por Kiva, siga las instrucciones de la sección "[Autenticación en el entorno de producción de Kiva (DESPUÉS de las pruebas)](https://kivapartnerhelpcenter.zendesk.com/hc/es/articles/360053994872-Autenticaci%C3%B3n-en-el-entorno-de-producci%C3%B3n-de-Kiva-DESPU%C3%89S-de-haber-hecho-las-pruebas-)".
 
 Se puede acceder a la nueva API de socios mediante un Oauth2 JWT obtenido del servicio de autenticación de Kiva siguiendo el flujo de credenciales de cliente Oauth2. De forma más sencilla, se trata de un cambio de las credenciales de cliente del socio por un token de duración limitada que puede utilizarse para autenticarse y autorizarse.
 
