@@ -1,4 +1,4 @@
-# Financial Partner Services sdk
+# Financial Partner Services SDK
 This repo is the SDK for the Financial Partners API.
 
 ## Structure
