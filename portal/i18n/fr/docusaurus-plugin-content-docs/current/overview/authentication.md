@@ -2,12 +2,13 @@
 sidebar_position: 3
 ---
 
-# API authentication
+# Authentification sur l'API
 
-The following instructions are for authenticating with Kiva's test environment, Stage. This is the first step in any API integration. If you have already completed your testing, and your tests have been approved by Kiva, follow the instructions on the page called "Authenticating to Kiva's production environment (AFTER testing)"
-The new Partner API is accessible using an Oauth2 JWT obtained from Kiva’s auth service following Oauth2 Client Credentials flow. More simply, this is an exchange of the Partner’s client credentials for a limited lifespan token that can be used for authentication and authorization.
+Les instructions suivantes sont destinées à faciliter l'authentification à l'environnement de test Kiva, Stage. Il s'agit de la première étape de toute intégration de l'API. Si vous avez déjà terminé vos tests et que ceux-ci ont été approuvés par Kiva, suivez les instructions de la section "Authentification dans l'environnement de production Kiva (APRÈS les tests)".
 
-### Sample Request (test environment)
+Il est possible d'accéder à la nouvelle API des partenaires via un Oauth2 JWT obtenu auprès du service d'authentification Kiva en suivant le flux d'informations d'identification du client Oauth2. Plus simplement, il s'agit d'un échange des informations d'identification du client du partenaire contre un token limité dans le temps qui peut être utilisé pour l'authentification et l'autorisation.
+
+### Demande d'échantillon (environnement de test)
 
 ```json
 1 curl --location --request POST 'https://auth-stage.dk1.kiva.org/oauth/token' \
@@ -21,15 +22,16 @@ The new Partner API is accessible using an Oauth2 JWT obtained from Kiva’s aut
 ```
 
 ### Post Data
-* **grant_type** - required. This will always have the value client_credentials.
-* **scope** - this represents the actions that within the Partner API that need to be executed. If the partner is authorized for these actions, the returned JWT will contain all authorized actions. Valid scopes are read:loans, create:loan_draft, create:journal_update, create:repayment.
-* **audience** - this identifies the audience for the JWT, which is the API where the JWT will be used.
-* **client_id** - this is the first half of the client credentials. It is accessible from within Partner Admin and directly identifies the Partner within Kiva’s system.
-* **client_secret** - this is the second half of the client credentials. Both It is accessible from within Partner Admin and is required to validate a client credentials request. client_id and client_secret should be treated as sensitive secrets.
+* **grant_type** - required. Il doit toujours avoir la valeur client_credentials. .
+* **scope** - représente les actions qui doivent être exécutées dans l'API du partenaire. Si le partenaire est autorisé pour ces actions, le JWT retourné contiendra toutes les actions autorisées. Les champs d'application valides sont read:loans, create:loan_draft, create:journal_update, create:repayment.
+* **audience** - identifie l'audience JWT, qui est l'API où le JWT sera utilisé.
+* **client_id** -Il s'agit de la première moitié des informations d'identification du client. Il est accessible depuis l'administration des partenaires et identifie directement le partenaire dans le système Kiva.
+* **client_secret** - C'est la deuxième moitié des informations d'identification du client. Il est accessible depuis Partner Admin et est nécessaire pour valider une demande d'informations d'identification du client. client_id et client_secret doivent être traités comme des secrets sensibles.
 
 
-### Response Data (test environment)
-On successful authentication, you should receive a response like the following:
+### Response Data (environnement de test)
+Si l'authentification est correcte, vous devriez recevoir une réponse comme la suivante :
+
 
 ```json
 1 {
@@ -52,13 +54,9 @@ On successful authentication, you should receive a response like the following:
 * **jti** - the unique identifier for the token
 
 ### Partner API Authentication
-Once you have received an access token, supply it as a Bearer token in the Authorization header as in the below curl example. You will need to customize two components:
-
-Insert your partner ID in the URL where it says "PARTNERID". You can find your partner ID in PA2 by going to the _Account > Profile page_.
-Insert the unique bearer token you received.
-
-### Get your account access
-Once you have an account created by a Kiva admin you can login into the management [website](https://partners.kiva.org/pa3/partner/145/api).
+Une fois que vous avez reçu un token d'accès, entrez-le comme token porteur dans l'en-tête d'autorisation comme dans l'exemple curl suivant. Vous devrez personnaliser deux éléments :
+1. Insérez votre ID de partenaire dans l'URL où il est indiqué "PARTNERID". Vous pouvez trouver votre ID de partenaire dans PA2 en allant sur la page Compte > Profil.
+2. Insérez le token unique au porteur que vous avez reçu.
 
 ```
 curl --location --request GET 'https://partner-api-stage.dk1.kiva.org/v3/partner/PARTNERID/loans' \

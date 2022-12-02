@@ -2,28 +2,24 @@
 sidebar_position: 4
 ---
 
-# Using the API to report repayments
+# Utilisation de l'API pour rapporter les remboursements
+Nous recommandons à votre équipe technique de consulter le coordinateur Kiva de votre organisation afin de bien comprendre le processus de rapport de remboursements. Pour ce faire, demandez à votre équipe technique d'examiner les points suivants :
+* [Cette vidéo](https://www.youtube.com/watch?v=pgg_rHBEQI8) explique en détail comment publier les rapports de remboursements.
 
-We recommend that your technical team consults with the Kiva Coordinator at your organization to fully understand Kiva's Repayment Reporting process. To do so, please have your technical team review the following:
+## Processus  
+1. Les informations sur les remboursements sont envoyées du SIG à PA2 en utilisant l'API.
+2. La personne en charge des rapports de remboursements entre dans le PA2 où elle révise et finalise le rapport.
 
+## Informations complémentaires
 
-This video provides a thorough explanation of the repayment reporting process.
+* Pour les partenaires qui utilisent le format à deux colonnes pour les rapports de remboursements et le registre de suivi, seul l'ID du prêt (internal_loan_id) est nécessaire. Pour les partenaires utilisant le format à trois colonnes, l'ID du prêt (internal_loan_ID) et l'ID du client (internal_client_ID) sont tous deux requis. Cela peut être vérifié en allant dans PA2 -> Compte -> Profil -> Format de téléchargement CSV.  
+* Lorsque vous testez la connexion API pour les suivis, veuillez utiliser les informations d'un client/emprunteur réel qui ont été publiées dans Kiva. N'utilisez pas les mêmes informations client que celles utilisées pour publier un projet de prêt test, car PA2 n'enregistrera pas ce crédit comme un prêt actif pour lequel les remboursements doivent être rapportés.
+  * Pour trouver un emprunteur Kiva existant, cliquez sur l'onglet "Remboursements" dans PA2, puis sur le nombre bleu de prêts avec des remboursements attendus. Cela vous permettra d'accéder à un rapport sur tous les clients Kiva pour lesquels Kiva attend un remboursement. Sélectionnez l'un des clients et les identifiants de prêt de ces clients pour les envoyer via l'API.
+  * Le montant déclaré doit correspondre à ce qui apparaît dans le SIG de votre organisation.
+  * Le coordinateur Kiva devra encore se connecter à PA2 pour finaliser le rapport de remboursements.
+* Pour vérifier si le format JSON que vous avez créé est correct, vous pouvez utiliser un validateur JSON en ligne comme celui-ci : https://jsonlint.com/ .
 
-[![Using API to report payments](https://img.youtube.com/vi/KTgcTgjiX5A/0.jpg)](https://www.youtube.com/watch?v=KTgcTgjiX5A&t=1s)
-
-## Process
-
-Repayment information sent from MIS to PA2 using the API
-The person in charge of repayment reporting logs into PA2 where they review and finalize the report
-Additional information
-
-
-For partners who use the two column format for repayment reporting and journaling, only the Loan ID (loan_id) is needed. For partners that use the three column format, both the Loan ID (loan_ID) and Client ID (client_ID) are needed. (This can be checked by going to PA2 -> Account -> Profile -> CSV upload format)
-When testing the API connection for repayment reporting, please use information of a real client/borrower that has been posted to Kiva. Do not use the same client information used to post a test loan draft as PA2 will not register this borrower as being in "payingBack" status.
-To find an existing Kiva borrower, click on the “Repayments” tab in PA2 and then the blue number of expected loans. This will take you to a report of all Kiva clients for whom Kiva expects a repayment. Select any of the client and loan IDs for these clients to send via the API. Screen_Shot_2021-09-16_at_11.50.29_AM.png
-The amount reported should match what appears in your organization’s MIS.
-The Kiva Coordinator is still required to log into PA2 to finalize the repayment report.
-To check if the JSON format you created is correct, you can use an online JSON validator like this one:  https://jsonlint.com/.
-Technical documentation
-
-All of Kiva's technical documentation, including endpoints, can be found [here](https://partner-api.k1.kiva.org/swagger-ui/):
+## Documentation technique
+* Toute la documentation technique de Kiva, y compris les points de terminaison, peut être trouvée ici :
+  * Environnement de test (Stage) :https://partner-api-stage.dk1.kiva.org/swagger-ui/
+  * Production (à utiliser après les tests)  https://partner-api.k1.kiva.org/swagger-ui/

@@ -2,29 +2,23 @@
 sidebar_position: 1
 ---
 
-# Overview of Kiva's API
+# Que fait l'API de Kiva ?
+L'API Kiva est un outil qui permet de connecter le SIG d'un partenaire directement à PA2. Il peut être utilisé pour publier automatiquement des prêts ou rapporter des remboursements.
+* **Publication des prêts** :  Un SIG contient généralement le nom de l'emprunteur, son sexe, l'ID du client, l'ID du prêt, le montant du prêt, la date de décaissement et le calendrier de remboursement. Pour publier un nouveau prêt dans Kiva, vous devez introduire manuellement toutes ces mêmes informations dans PA2. Grâce à l'API, le SIG peut envoyer ces informations directement à PA2 et créer un nouveau projet de prêt. Au lieu de devoir introduire manuellement toutes les informations relatives à un nouveau prêt, il ne vous restera plus qu'à réviser le projet et à le publier.
+* **Rapport de remboursements** : Les informations de remboursements actualisées pour chaque emprunteur sont stockées dans le SIG. Grâce à l'API, ces informations peuvent être envoyées directement à PA2 chaque mois, ce qui élimine la nécessité de créer et de télécharger manuellement un fichier CSV. Le partenaire peut ensuite examiner et finaliser son rapport comme il le ferait normalement.
+* **Publication des suivis** : Les nouvelles informations de suivi ou les mises à jour qui sont enregistrées dans le SIG d'un partenaire peuvent être envoyées directement à PA2 via l'API au lieu d'être téléchargées manuellement. Le partenaire devra examiner et confirmer toutes informations de suivi envoyées de son système interne.
 
-## What does Kiva’s API do?
-Kiva’s API is a tool that can connect a Field Partner’s MIS directly to PA2. It can be used to automatically either post loans or report repayments.
+## Avantages de l'utilisation de l'API de Kiva
+Les principaux avantages de l'utilisation de l'API sont les suivants :
+* **Économie de temps pour les partenaires**. L'API de Kiva réduisant la quantité d'informations à introduire manuellement dans PA2, le temps consacré précédemment à cette tâche se trouvera économisé.
+* **Amélioration de la précision des informations** enregistrées dans PA2. La transmission manuelle des données est sujette à un risque d'erreur humaine. Grâce à l'API, les informations de PA2 peuvent coïncider exactement avec celles du SIG du partenaire.
 
-Posting Loans: An MIS typically stores the borrower’s name, gender, client ID, loan ID, loan amount, disbursement date, and repayment schedule. To post a new loan on Kiva, you need to enter all of this same information in PA2. Using the API, the MIS can send this information directly to PA2 and create a new loan draft. Instead of manually entering all the information for a new loan, someone now only needs to review the draft and publish it.
-Reporting Repayments: Actual repayment information for each borrower is stored in the MIS. With the API, this information can get sent directly to PA2 each month, which eliminates the needs to manually create and upload a CSV report. Then the Field Partner must review and finalize their report as they usually would.
-Posting Journals: Information for a new journal or any update that is stored within a partner’s MIS can be sent directly to PA2 via the API, instead of manually uploading each journal. The partner will need to review and confirm all journals sent from their internal system.
-Benefits of Using Kiva’s API
+## Témoignages de partenaires
+Kiva a testé l'API avec Milaap, l'un de nos partenaires opérant en Inde, avec des résultats très positifs. Ils ont réduit le temps nécessaire à la publication d'un profil de 10-12 minutes à seulement 4 minutes. Milaap a utilisé environ deux semaines pour mettre en place et tester l'API. Voici ce qu'ils ont dit dans leurs propres mots : "La création de l'API a considérablement réduit le temps et les efforts que nous consacrons au téléchargement des profils..... Cela nous a permis de collecter plus de fonds en moins de temps. Elle libère également certaines ressources humaines, qui peuvent maintenant être utilisées pour d'autres activités.
 
-## The main benefits of using the API are:
+## Comment puis-je commencer à utiliser l'API  de Kiva ?
 
-Saving Field Partners time. Since the Kiva API reduces the amount of information that needs to be manually entered in PA2, the time previously spent doing this will be saved.
-Improving the accuracy of the information entered in PA2. Manual data entry is prone to human error. With the API, the information in PA2 can exactly match the information in the Field Partner’s MIS.
+L'API de Kiva est configurée comme un point de terminaison qui accepte les données dans un format spécifique utilisant JSON. Pour commencer à utiliser notre API, le partenaire doit configurer son SIG pour envoyer des informations au point de terminaison Kiva dans ce format.
 
-## Field Partner Testimonial
-
-Kiva piloted the API with Milaap, one of our Field Partners working in India, with very positive results. They reduced the amount of time it takes to post one profile from 10-12 minutes to only 4 minutes. It took Milaap about two weeks to set up and test the API. Here’s what they had to say in their own words: 
-
-> “Setting up the API has significantly reduced the time and effort put into uploading of profiles… This has allowed us to raise more funds in lesser amount of time. In addition to this, internal resources also get freed up and this time can be used for other activities.”
-
-## How do I start using Kiva’s API?
-Kiva’s API is set up as an endpoint that accepts data in a specific format using JSON. To begin using our API, the Field Partner needs to set up their MIS to send information to Kiva’s endpoint in this format.
-
-If you are interested in integrating in 2021, please complete this [form](https://kiva.tfaforms.net/107 "form").
+Si vous êtes intéressé à rejoindre le projet API, veuillez remplir ce formulaire.
 
