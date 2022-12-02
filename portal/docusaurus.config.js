@@ -10,7 +10,7 @@ const config = {
   tagline: 'Placing your loans in the Kiva Marketplace',
   url: 'https://fps-sdk-portal.web.app',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
