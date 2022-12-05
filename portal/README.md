@@ -41,6 +41,14 @@ This command generates static content into the `build` directory and can be serv
 We are using firebase for hosting the portal.  These instructions 
 assumed you have installed the [firebase CLI](https://firebase.google.com/docs/cli).
 
+Firebase access is linked to your Google account.  Please log in using your google account.
+
+```
+firebase login
+```
+
+Next build using the build command above then run these firebase commands.
+
 ```
 firebase use --add
 firebase target:apply hosting dec2022 fps-sdk-portal
