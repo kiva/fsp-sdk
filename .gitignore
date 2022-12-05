@@ -2,6 +2,9 @@
 .env
 
 node_modules/
+.firebase/
+# might want to include this and have a tag already made but for now excluding it
+.firebaserc
 .idea/
 bin/
 obj/

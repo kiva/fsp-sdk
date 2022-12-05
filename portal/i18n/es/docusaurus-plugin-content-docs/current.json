@@ -1,14 +1,14 @@
 {
   "version.label": {
-    "message": "Next",
+    "message": "Próxima",
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.Guides": {
-    "message": "Guides",
+    "message": "Guías",
     "description": "The label for category Guides in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Guides.link.generated-index.description": {
-    "message": "Specialized guides to help achieve specific goals with the Kiva Partner API",
+    "message": "Guías especializadas para ayudar a lograr objetivos específicos con la API de socios de Kiva",
     "description": "The generated-index page description for category Guides in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Tutorial": {
@@ -16,7 +16,7 @@
     "description": "The label for category Tutorial in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Tutorial.link.generated-index.description": {
-    "message": "Overview of Kiva's API",
+    "message": "Descripción general de la API de Kiva",
     "description": "The generated-index page description for category Tutorial in sidebar tutorialSidebar"
   }
 }

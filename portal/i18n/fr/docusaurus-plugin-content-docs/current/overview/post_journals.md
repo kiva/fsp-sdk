@@ -11,7 +11,7 @@ Nous recommandons à votre équipe technique de consulter le coordinateur Kiva d
 ## Processus
 * Les nouvelles informations sur les prêts sont envoyées du SIG à PA2 via l'API.
 * Un projet de prêt est automatiquement créé. Les projets peuvent être consultés en cliquant sur le lien " Brouillons " dans la section " Prêts " de la page d'accueil de PA2.
-* Each draft must be reviewed and then published by a person.
+* Utilisation du point de terminaison de récupération des prêts de l'API.
 
 ## Informations complémentaires
 * Avant que le prêt en question ne soit publié, PA2 effectuera tous les mêmes contrôles de validation que pour les prêts publiés sans l'API. Tous les messages d'erreur doivent être résolus avant que le prêt puisse être publié.
