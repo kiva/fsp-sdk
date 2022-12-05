@@ -5,8 +5,6 @@ sidebar_position: 9
 # Passer à l'environnement de production
 __Veuillez ne passer à l'environnement de production Kiva qu'après en avoir reçu la confirmation de notre part. Si vous souhaitez vous authentifier dans l'environnement de test, veuillez visiter [cette page](https://kivapartnerhelpcenter.zendesk.com/hc/fr/articles/360051231131-Authentification-API-flux-d-informations-d-identification-du-client-)__:
 
-You will need to update four central pieces of information in your authentication:
-
 Vous devrez mettre à jour quatre informations centrales dans votre authentification :
 * Token URL: https://auth.k1.kiva.org/oauth/token
 * Audience/Partner API URL: https://partner-api.k1.kiva.org

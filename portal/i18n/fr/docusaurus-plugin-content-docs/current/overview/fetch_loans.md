@@ -2,7 +2,8 @@
 sidebar_position: 4
 ---
 
-# Using the API loans fetch endpoint
+# Utilisation du point de terminaison d'emprunt de l'API
+
 
 ## Processus
 * Une requête d'information est envoyée à PA2 via l'API.

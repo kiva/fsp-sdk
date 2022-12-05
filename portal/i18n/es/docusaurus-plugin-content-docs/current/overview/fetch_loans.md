@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Using the API loans fetch endpoint
+# Usando el punto final de obtención de préstamos de la API
 
 ## Proceso
 
