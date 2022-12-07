@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# Fill a Bug
+# File a Bug
 
-Let's discover the most effective way to ** Fill a bug**.
+Let's discover the most effective way to ** File a bug**.
 
 ## Sharing All Reproduction Information
 
