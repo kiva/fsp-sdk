@@ -11,7 +11,7 @@ import styles from './index.module.css';
 function HomepageHeader() {
     const appTitle = translate({message: 'Kiva Partner API', id: 'app-title'});
     const appTagLine = translate({message: 'Placing your loans in the Kiva Marketplace', id: 'app-tagline'});
-    const tutorial = translate({message: 'Introduction Tutorial - 15 min ⏱', id: 'app-tutorial-button'});
+    const tutorial = translate({message: 'Introduction Tutorial', id: 'app-tutorial-button'});
 
     return (
         <header className={clsx('hero hero--primary', styles.heroBanner)}>

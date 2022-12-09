@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# Fill a Bug
+# File a Bug
 
-Let's discover the most effective way to ** Fill a bug**.
+Let's discover the most effective way to ** File a bug**.
 
 ## Sharing All Reproduction Information
 
@@ -17,4 +17,4 @@ As part of filing a bug please add:
 
 ## Contact your Support Team
 
-Please contact us at partnersupport@kiva.org and share what you can in order to reproduce.
+Please contact us at partnersupport@kiva.org or via your dedicated Slack channel and share what you can in order to reproduce.

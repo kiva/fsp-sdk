@@ -30,10 +30,18 @@
 }
 
 svg {
-  max-width: 20%;
-  max-height: 20%;
+  max-width: 50%;
+  max-height: 50%;
 }
 
 .navbar__logo {
   padding-bottom: 5px;
+}
+
+.hero--primary {
+  background-color: #1D7748;
+}
+
+.hero__title, .hero__subtitle {
+  color: #333333 !important;
 }
