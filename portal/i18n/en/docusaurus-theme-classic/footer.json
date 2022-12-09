@@ -28,7 +28,7 @@
     "description": "The label of footer link with label=GitHub linking to https://github.com/Kiva/fps-sdk"
   },
   "copyright": {
-    "message": "Copyright © 2022 Kiva Microfunds, Inc. ",
+    "message": "Copyright © 2022 Kiva. All rights reserved. ",
     "description": "The footer copyright"
   }
 }
