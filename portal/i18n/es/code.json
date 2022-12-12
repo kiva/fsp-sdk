@@ -1,9 +1,9 @@
 {
   "app-title": {
-    "message": "API Para los Socios de Kiva"
+    "message": "API para los Socios de Kiva"
   },
   "app-tagline": {
-    "message": "Colocar sus préstamos en el sitio web de Kiva"
+    "message": "Colocando sus préstamos en el sitio web de Kiva"
   },
   "app-tutorial-button": {
     "message": "Tutorial de introducción"
@@ -12,7 +12,7 @@
     "message": "Listos para la integración"
   },
   "home-page-1": {
-    "message": "La API de Kiva Partner fue diseñada para ser integrada en los sistemas financieros existentes",
+    "message": "La API para los socios de Kiva fue diseñada para ser integrada en todos los sistemas financieros existentes",
     "description": "none"
   },
   "home-page-title-2": {

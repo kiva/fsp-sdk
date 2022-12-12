@@ -8,7 +8,7 @@
     "description": "Navbar item with label Introduction"
   },
   "item.label.API Reference": {
-    "message": "Référence API",
+    "message": "Documentation de référence de l'API",
     "description": "Navbar item with label API Reference"
   },
   "item.label.SDKs": {
@@ -16,7 +16,7 @@
     "description": "Navbar item with label SDKs"
   },
   "item.label.Start Your Integration": {
-    "message": "Démarrez votre intégration",
+    "message": "Commencer avec l'intégration",
     "description": "Navbar item with label Start Your Integration"
   }
 }

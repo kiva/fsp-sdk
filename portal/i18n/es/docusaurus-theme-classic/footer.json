@@ -16,7 +16,7 @@
     "description": "The label of footer link with label=Tutorial linking to /docs/intro"
   },
   "link.item.label.File a Bug": {
-    "message": "Presentar un error",
+    "message": "Reportar un fallo",
     "description": "The label of footer link with label=File a Bug linking to /docs/guides/bug"
   },
   "link.item.label.Blog": {
