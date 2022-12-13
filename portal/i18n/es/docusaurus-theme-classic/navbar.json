@@ -1,6 +1,6 @@
 {
   "title": {
-    "message": "API Para los Socios de Kiva",
+    "message": "API para los Socios de Kiva",
     "description": "The title in the navbar"
   },
   "item.label.Introduction": {
@@ -16,7 +16,7 @@
     "description": "Navbar item with label SDKs"
   },
   "item.label.Start Your Integration": {
-    "message": "Comienza tu integración",
+    "message": "Comenzar la integración",
     "description": "Navbar item with label Start Your Integration"
   }
 }

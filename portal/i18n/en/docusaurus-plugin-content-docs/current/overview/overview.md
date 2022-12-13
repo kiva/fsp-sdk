@@ -26,5 +26,5 @@ Kiva piloted the API with Milaap, one of our Field Partners working in India, wi
 ## How do I start using Kiva’s API?
 Kiva’s API is set up as an endpoint that accepts data in a specific format using JSON. To begin using our API, the Field Partner needs to set up their MIS to send information to Kiva’s endpoint in this format.
 
-If you are interested in integrating in 2021, please complete this [form](https://kiva.tfaforms.net/107 "form").
+If you are interested in integrating, please complete this [form](https://kiva.tfaforms.net/107 "form").
 

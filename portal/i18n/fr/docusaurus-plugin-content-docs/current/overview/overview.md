@@ -20,5 +20,5 @@ Kiva a testé l'API avec Milaap, l'un de nos partenaires opérant en Inde, avec 
 
 L'API de Kiva est configurée comme un point de terminaison qui accepte les données dans un format spécifique utilisant JSON. Pour commencer à utiliser notre API, le partenaire doit configurer son SIG pour envoyer des informations au point de terminaison Kiva dans ce format.
 
-Si vous êtes intéressé à rejoindre le projet API, veuillez remplir ce formulaire.
+Si vous êtes intéressé à rejoindre le projet API, veuillez remplir ce [formulaire](https://kiva.tfaforms.net/119 "form").
 
