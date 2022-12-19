@@ -44,22 +44,19 @@ Si la autenticación es exitosa, debería recibir una respuesta como la siguient
 9 }
 ```
 
-* **access_token** - this is the bearer token that you will use to access the Partner API.
-* **token_type** - this indicates the type of token, this should always be bearer.
-* **expires_in** - number of seconds the token will be valid for (also check the exp claim inside the JWT for an expiration timestamp).
-* **scope** - this is an intersection between scopes that were requested and scopes that the Partner has been authorized for.
-* **iss** - the issuer of the JWT.
-* **partnerId** - the Kiva identifier for the partner. You can find your partnerId in PA2 by going to the Account > Profile page.
-* **jti** - the unique identifier for the token
+* **access_token** - es el token de portador que se utilizará para acceder a la API de socios.
+* **token_type** - indica el tipo de token, que siempre debe ser de portador.
+* **expires_in** - número de segundos durante los que el token será válido (compruebe también la exp claim dentro del JWT para ver la fecha de caducidad).
+* **scope** - es una intersección entre los scopes, ambitos solicitados y los ámbitos para los que el socio ha sido autorizado.
+* **iss** - el emisor del JWT.
+* **partnerId** - el identificador de Kiva para el socio. Puede encontrar su partnerId en PA2 yendo a la página Cuenta > Perfil.
+* **jti** - el identificador único para el token
+
 
 ### Partner API Authentication
-Once you have received an access token, supply it as a Bearer token in the Authorization header as in the below curl example. You will need to customize two components:
-
-Insert your partner ID in the URL where it says "PARTNERID". You can find your partner ID in PA2 by going to the _Account > Profile page_.
-Insert the unique bearer token you received.
-
-### Get your account access
-Once you have an account created by a Kiva admin you can login into the management [website](https://partners.kiva.org/pa3/partner/145/api).
+Una vez que haya recibido un token de acceso, introdúzcalo como token de portador en la cabecera de autorización como en el siguiente ejemplo de curl. Tendrá que personalizar dos componentes:
+1. Inserte su ID de socio en la URL donde dice "PARTNERID". Puede encontrar su ID de socio en PA2 yendo a la página Cuenta > Perfil.
+2. Inserte el token único al portador que recibió.
 
 ```
 curl --location --request GET 'https://partner-api-stage.dk1.kiva.org/v3/partner/PARTNERID/loans' \
