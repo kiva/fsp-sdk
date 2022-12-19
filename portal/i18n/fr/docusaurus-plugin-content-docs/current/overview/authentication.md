@@ -45,13 +45,14 @@ Si l'authentification est correcte, vous devriez recevoir une réponse comme la 
 9 }
 ```
 
-* **access_token** - this is the bearer token that you will use to access the Partner API.
-* **token_type** - this indicates the type of token, this should always be bearer.
-* **expires_in** - number of seconds the token will be valid for (also check the exp claim inside the JWT for an expiration timestamp).
-* **scope** - this is an intersection between scopes that were requested and scopes that the Partner has been authorized for.
-* **iss** - the issuer of the JWT.
-* **partnerId** - the Kiva identifier for the partner. You can find your partnerId in PA2 by going to the Account > Profile page.
-* **jti** - the unique identifier for the token
+* **access_token** - est le token du porteur à utiliser pour accéder à l'API.
+* **token_type** - indique le type de token, qui doit toujours être un token porteur.
+* **expires_in** - nombre des secondes pendant lesquelles le token sera valide (vérifiez également la date d'expiration dans le JWT).
+* **scope** - est une intersection entre les scopes, demandés et les scopes pour lesquels le partenaire a été autorisé.
+* **iss** - l'émetteur du JWT.
+* **partnerId** - l'identifiant Kiva du partenaire. Vous pouvez trouver votre partnerId dans PA2 en allant sur la page Compte > Profil.
+* **jti** - l'identifiant unique du token
+
 
 ### Partner API Authentication
 Une fois que vous avez reçu un token d'accès, entrez-le comme token porteur dans l'en-tête d'autorisation comme dans l'exemple curl suivant. Vous devrez personnaliser deux éléments :
