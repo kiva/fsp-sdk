@@ -48,7 +48,6 @@ echo assertEncoding($utf8_text, UTF_8);
 // Encode it to ISO
 $now_as_iso8859_1 = encodeToIso($utf8_text);
 echo assertEncoding($now_as_iso8859_1, ISO_8859_1);
-assert(detectEncoding($now_as_iso8859_1) == ISO_8859_1);
 
 // Back to UTF-8
 $back_to_utf8 = encodeToUtf8($now_as_iso8859_1);
