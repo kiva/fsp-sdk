@@ -1,7 +1,8 @@
 # Partner API Documentation Portal
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator. It contains
-information to help our partners integrate with [Kiva's Partner API](https://partner-api.k1.kiva.org/swagger-ui/#/partners).
+information to help our partners integrate
+with [Kiva's Partner API](https://partner-api.k1.kiva.org/swagger-ui/#/partners).
 
 ## General Usage
 
@@ -70,10 +71,18 @@ The following sections assume you have run the [Install](#install) and [Build](#
 
 ### Testing on the Firebase Emulator
 
-Follow the instructions
-on [Google's documentation for testing a site locally](https://firebase.google.com/docs/hosting/test-preview-deploy).
+Run the following command to start the emulator:
+
+```
+firebase emulator:start
+```
+
+The [firebase.json](../firebase.json) is set up, so this is all that is needed. The site is at http://127.0.0.1:5000/.
 *Once you are satisfied with your work, please follow the steps for creating a Preview site, and link that in your pull
 request!*
+
+You can find the steps for setting up a project with the emulator
+on [Google's documentation for testing a site locally](https://firebase.google.com/docs/hosting/test-preview-deploy).
 
 ### Deploying to Firebase
 
