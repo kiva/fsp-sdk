@@ -4,7 +4,7 @@ sidebar_position: 9
 
 # Using production environment
 
-___Please only switch to Kiva's production environment after you've received confirmation to do so from Kiva. If you are looking to authenticate with Kiva's test environment, visit this [page](/authentication).___
+___Please only switch to Kiva's production environment after you've received confirmation to do so from Kiva. If you are looking to authenticate with Kiva's test environment, visit [this page](/docs/overview/authentication).___
 
 You will need to update four central pieces of information in your authentication:
 

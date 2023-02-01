@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Overview of Kiva's API
+# Información general sobre la API para socios de Kiva
 
 ## ¿Qué hace la API de Kiva?
 La API de Kiva es una herramienta que puede conectar el SIG de un socio directamente con PA2. Puede utilizarse para publicar automáticamente los préstamos o informar de los reembolsos.

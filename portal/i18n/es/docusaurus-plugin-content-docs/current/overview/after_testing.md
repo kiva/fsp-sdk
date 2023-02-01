@@ -4,7 +4,7 @@ sidebar_position: 9
 
 # Pasando al entorno de producción (Después de las pruebas)
 
-___Por favor, sólo cambie al entorno de producción de Kiva después de haber recibido la confirmación para hacerlo por parte de nosotros. Si desea autenticarse en el entorno de prueba, visite esta página:___
+___Por favor, sólo cambie al entorno de producción de Kiva después de haber recibido la confirmación para hacerlo por parte de nosotros. Si desea autenticarse en el entorno de prueba, visite [esta página](/es/docs/overview/authentication).___
 
 Tendrá que actualizar cuatro datos centrales en su autentificación:
 

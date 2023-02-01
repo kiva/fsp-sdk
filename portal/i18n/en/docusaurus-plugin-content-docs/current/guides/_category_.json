@@ -1,8 +1,0 @@
-{
-  "label": "Guides",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "Specialized guides to help achieve specific goals with the Kiva Partner API"
-  }
-}
