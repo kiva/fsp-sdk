@@ -31,45 +31,14 @@ The build output will contain a directory for each locale present in [docusaurus
 * `build/es` - ES (Spanish)
 * `build/fr` - FR (French)
 
-## Local Development
-
-### Running the site with `yarn`
-
-Run this command in the `fps-sdk/portal` directory:
-
-```
-$ yarn start
-```
-
-This will start a local development server and open up a browser window. Most changes are reflected live without
-having to restart the server.
-
-_Note: the best way to test the full site is on the [Firebase Emulator](#testing-on-the-firebase-emulator). Some
-features, such as i18n, behave differently when the full site is deployed to Firebase._
-
-### Testing a specific language
-
-First, build the site for the locale you want to test. This example rebuilds French (FR). To rebuild a different
-language, replace `fr` with the appropriate language code.
-
-```
-yarn run write-translations -- --locale fr
-```
-
-This example tests French. To test a different language, replace `fr` with the appropriate language code.
-
-```
-yarn run start -- --locale fr
-```
-
-## Firebase Deployment and Testing
+### Testing
 
 We are using Firebase to host the portal. Firebase is a Google service for hosting static websites. These instructions
 assume you have installed the [Firebase CLI](https://firebase.google.com/docs/cli).
 
 The following sections assume you have run the [Install](#install) and [Build](#build) steps.
 
-### Testing on the Firebase Emulator
+### Running the Firebase Emulator
 
 Run the following command to start the emulator:
 
