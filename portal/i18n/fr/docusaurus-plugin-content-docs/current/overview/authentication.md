@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Authentification sur l'API
 
-Les instructions suivantes sont destinées à faciliter l'authentification à l'environnement de test Kiva, Stage. Il s'agit de la première étape de toute intégration de l'API. Si vous avez déjà terminé vos tests et que ceux-ci ont été approuvés par Kiva, suivez les instructions de la section "Authentification dans l'environnement de production Kiva (APRÈS les tests)".
+Les instructions suivantes sont destinées à faciliter l'authentification à l'environnement de test Kiva, Stage. Il s'agit de la première étape de toute intégration de l'API. Si vous avez déjà terminé vos tests et que ceux-ci ont été approuvés par Kiva, suivez les instructions de la section [Authentification dans l'environnement de production Kiva (APRÈS les tests)](/docs/overview/after_testing).
 
 Il est possible d'accéder à la nouvelle API des partenaires via un Oauth2 JWT obtenu auprès du service d'authentification Kiva en suivant le flux d'informations d'identification du client Oauth2. Plus simplement, il s'agit d'un échange des informations d'identification du client du partenaire contre un token limité dans le temps qui peut être utilisé pour l'authentification et l'autorisation.
 
