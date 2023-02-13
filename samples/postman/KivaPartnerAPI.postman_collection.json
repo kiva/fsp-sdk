@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "1126e5cf-089c-40c4-9821-2ea5969d38d9",
-		"name": "Kiva Partner API Copy",
+		"_postman_id": "4d89c9d7-e2ee-4cc9-8a9d-452fbd9f54fa",
+		"name": "Kiva Partner API",
 		"description": "This collection contains example Kiva API calls for integrating Field Partner data pipelines with Kiva's Partner Application (PA2).\n\nWith these examples and your partner setup information in hand, you'll be able to interact with our API to authorize requests, draft loans, and more. This is a great hands-on way to understand how to build your Kiva API integration by observing working examples, and we highly recommend beginning your integration by utilizing this collection to try out the API.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -112,7 +112,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"client_waiver_signed\": true,\n  \"description\": \"Example loan description\",\n  \"disburse_time\": \"2030-12-01\",\n  \"entreps\": [\n    {\n      \"amount\": 3500,\n      \"client_id\": \"451219\",\n      \"first_name\": \"Азиз\",\n      \"gender\": \"male\",\n      \"last_name\": \"Изатов\",\n      \"loan_id\": \"A-2036-12\"\n    }\n  ],\n  \"loanuse\": \"Example loan use\",\n  \"schedule\": [\n    {\n      \"date\": \"2030-12-01\",\n      \"interest\": 34,\n      \"principal\": 349\n    }\n  ]\n}"
+					"raw": "{\n  \"client_waiver_signed\": true,\n  \"description\": \"\",\n  \"loanuse\": \"\",\n  \"entreps\": [\n    {\n      \"amount\": 0,\n      \"loan_id\": \"\",\n      \"client_id\": \"\",\n      \"first_name\": \"\",\n      \"last_name\": \"\",\n      \"gender\": \"\"\n    }\n  ],\n  \"schedule\": [\n    {\n      \"date\": \"YYYY-MM-DD\",\n      \"interest\": 0,\n      \"principal\": 0\n    }\n  ],\n  \"disburse_time\": \"YYYY-MM-DD\"\n}"
 				},
 				"url": {
 					"raw": "https://partner-api-stage.dk1.kiva.org/v3/partner/{{PARTNER_ID}}/loan_draft",

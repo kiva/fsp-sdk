@@ -32,11 +32,25 @@ copy the values in the `INITIAL VALUE` column to the `CURRENT VALUE` column:
 
 ![Collection variable setup](screenshots/VariableSetup.png)
 
-### Parameter Descriptions
+### Posting loan drafts
+
+Most fields on the loan draft request are optional, and any information that is not supplied through the API can later
+be manually added in PA2. The more information that can be supplied through the API, the better, since it eliminates
+manual steps. Ideally, enough information is supplied so that the PA2 Loan Draft page is fully populated from the API 
+call.
+
+Our `Loan Draft [POST]` request includes a sample JSON structure, however, this is not a complete example. You can 
+learn more about the Loan Draft structure on the 
+[Swagger UI page](https://partner-api.k1.kiva.org/swagger-ui/#/partners/loanDraftRouteUsingPOST).
+
+- Please supply dates in a YYYY-MM-DD format. 
+
+### Parameter descriptions
 
 We strive to include descriptions for parameters in the request. For instance, you can find descriptions for the body
 parameters in the `Authorization [POST]` request:
 ![Descriptions](screenshots/Descriptions.png)
+
 
 ## Postman Tips
 
