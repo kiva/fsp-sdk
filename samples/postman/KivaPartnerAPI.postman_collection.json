@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "1126e5cf-089c-40c4-9821-2ea5969d38d9",
 		"name": "Kiva Partner API Copy",
-		"description": "## Overview\nThis repository contains a collection of example Kiva API calls for integrating Field Partner data pipelines with Kiva's Partner Application (PA2).\n\nWith these examples and your partner setup     information in hand, you'll be able to interact with our API to authorize requests, draft loans, and more. This is a great hands-on way to understand how to build your Kiva API integration by observing working examples, and we highly recommend beginning your integration by utilizing this collection to try out the API.\n\n##",
+		"description": "This collection contains example Kiva API calls for integrating Field Partner data pipelines with Kiva's Partner Application (PA2).\n\nWith these examples and your partner setup information in hand, you'll be able to interact with our API to authorize requests, draft loans, and more. This is a great hands-on way to understand how to build your Kiva API integration by observing working examples, and we highly recommend beginning your integration by utilizing this collection to try out the API.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
