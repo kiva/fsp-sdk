@@ -3,7 +3,7 @@ sidebar_position: 3
 ---
 
 # Utilisation de l'API pour publier des projets de prêts
-Nous recommandons à votre équipe technique de consulter le coordinateur Kiva de votre organisation afin de bien comprendre le processus de publication des projets de prêts Kiva. Pour ce faire, demandez à votre équipe technique d'examiner les points suivants:
+Nous recommandons à votre équipe technique de consulter le coordinateur Kiva de votre organisation afin de bien comprendre le processus de publication des projets de prêts Kiva. Pour ce faire, demandez à votre équipe technique d'examiner les points suivants :
 * [Cette vidéo](https://www.youtube.com/watch?v=9gScexv-yZo&amp;t=5s) explique en détail comment publier un prêt individuel.
 * [Cette vidéo](https://www.youtube.com/watch?v=KvKUScWF73M&amp;t=1s) explique en détail comment publier un prêt de groupe.
 * Consultez la section Nouveaux prêts pour plus d'informations, en particulier [l'étape 1 : Description - Prêts individuels](https://kivapartnerhelpcenter.zendesk.com/hc/en-us/articles/360030919632) et [l'étape 1 : Description - Prêts de groupe](https://kivapartnerhelpcenter.zendesk.com/hc/en-us/articles/360031260191).
