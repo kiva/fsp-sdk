@@ -12,12 +12,14 @@ Nous recommandons à votre équipe technique de consulter le coordinateur Kiva d
 
 ## Informations complémentaires
 
-* Pour les partenaires qui utilisent le format à deux colonnes pour les rapports de remboursements et le registre de suivi, seul l'ID du prêt (internal_loan_id) est nécessaire. Pour les partenaires utilisant le format à trois colonnes, l'ID du prêt (internal_loan_ID) et l'ID du client (internal_client_ID) sont tous deux requis. Cela peut être vérifié en allant dans PA2 -> Compte -> Profil -> Format de téléchargement CSV.  
-* Lorsque vous testez la connexion API pour les suivis, veuillez utiliser les informations d'un client/emprunteur réel qui ont été publiées dans Kiva. N'utilisez pas les mêmes informations client que celles utilisées pour publier un projet de prêt test, car PA2 n'enregistrera pas ce crédit comme un prêt actif pour lequel les remboursements doivent être rapportés.
-  * Pour trouver un emprunteur Kiva existant, cliquez sur l'onglet "Remboursements" dans PA2, puis sur le nombre bleu de prêts avec des remboursements attendus. Cela vous permettra d'accéder à un rapport sur tous les clients Kiva pour lesquels Kiva attend un remboursement. Sélectionnez l'un des clients et les identifiants de prêt de ces clients pour les envoyer via l'API.
+Pour les partenaires qui utilisent le format à deux colonnes pour les rapports de remboursements et le registre de suivi, seul l'ID du prêt (internal_loan_id) est nécessaire. Pour les partenaires utilisant le format à trois colonnes, l'ID du prêt (internal_loan_ID) et l'ID du client (internal_client_ID) sont tous deux requis. Cela peut être vérifié en allant dans PA2 -> Compte -> Profil -> Format de téléchargement CSV.  
+
+Lorsque vous testez la connexion API pour les suivis, veuillez utiliser les informations d'un client/emprunteur réel qui ont été publiées dans Kiva. N'utilisez pas les mêmes informations client que celles utilisées pour publier un projet de prêt test, car PA2 n'enregistrera pas ce crédit comme un prêt actif pour lequel les remboursements doivent être rapportés.
+  * Pour trouver un emprunteur Kiva existant, cliquez sur l'onglet "Remboursements" dans PA2, puis sur le nombre bleu de prêts avec des remboursements attendus. Cela vous permettra d'accéder à un rapport sur tous les clients Kiva pour lesquels Kiva attend un remboursement. Sélectionnez l'un des clients et les identifiants de prêt de ces clients pour les envoyer via l'API: ![repayments_expected.png](@site/static/img/repayments_expected.png)
   * Le montant déclaré doit correspondre à ce qui apparaît dans le SIG de votre organisation.
   * Le coordinateur Kiva devra encore se connecter à PA2 pour finaliser le rapport de remboursements.
-* Pour vérifier si le format JSON que vous avez créé est correct, vous pouvez utiliser un validateur JSON en ligne comme celui-ci : https://jsonlint.com/ .
+
+Pour vérifier si le format JSON que vous avez créé est correct, vous pouvez utiliser un validateur JSON en ligne comme celui-ci : https://jsonlint.com/ .
 
 ## Documentation technique
 * Toute la documentation technique de Kiva, y compris les points de terminaison, peut être trouvée ici :
