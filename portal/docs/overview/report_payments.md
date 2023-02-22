@@ -3,9 +3,8 @@ sidebar_position: 4
 ---
 
 # Using the API to report repayments
-We recommend that your technical team consults with the Kiva Coordinator at your organization to fully understand Kiva's Repayment Reporting process. To do so, please have your technical team review the following explanation of the repayment reporting process:
-
-[![Using API to report payments](https://img.youtube.com/vi/KTgcTgjiX5A/0.jpg)](https://www.youtube.com/watch?v=KTgcTgjiX5A&t=1s)
+We recommend that your technical team consults with the Kiva Coordinator at your organization to fully understand Kiva's Repayment Reporting process. To do so, please have your technical team review the following:
+* [This video](https://img.youtube.com/vi/KTgcTgjiX5A/0.jpg) provides a thorough explanation of the repayment reporting process.
 
 ## Process
 1. Repayment information sent from MIS to PA2 using the API
