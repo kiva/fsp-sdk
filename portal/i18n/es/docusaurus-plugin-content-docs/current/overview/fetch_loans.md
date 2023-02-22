@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ## Proceso
 
-* Se envía una consulta de información a PA2 a través de la API.
+* Se envía una consulta de información a PA2 a través de la API, [GET /v3/partner/{id}/loans](https://partner-api-stage.dk1.kiva.org/swagger-ui/#/partners/loansRouteUsingGET).
 * Hay 4 parámetros de solicitud de búsqueda que puede enviar: query, status, offset y limit
   * Query: puede ser cualquier línea que se escriba en la barra de búsqueda de PA2 (por ejemplo, nombre, ID de préstamo, ID de cliente o ID de Kiva) 
   * Status: puede ser uno de los siguientes:
