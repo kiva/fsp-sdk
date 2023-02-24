@@ -23,7 +23,7 @@ Está bien que la API no envíe información de algunos campos necesarios para p
 
 Dependiendo de si está publicando un préstamo de grupo o individual, algunos campos no son necesarios. Si el préstamo que está publicando es un préstamo individual, y envía datos que son específicos de un préstamo de grupo, PA2 le dará un mensaje de error y no podrá publicar el préstamo.
 
-Si se publica un préstamo individual, no se debe incluir ninguno de los siguientes campos. **Los siguientes campos sólo son necesarios cuando se contabiliza un préstamo grupal**:
+Si se publica un préstamo individual, no se debe incluir ninguno de los siguientes campos. **Los siguientes campos sólo son necesarios cuando se contabiliza un préstamo grupal:**
 
 * `group_name`: este es el nombre del grupo que aparecerá en Kiva.org.
 * `internal_client_id`: es el ID de cada cliente representado dentro del grupo (por ejemplo, si un grupo tiene tres miembros, cada uno de ellos puede tener su propio ID de cliente que debe figurar aquí)

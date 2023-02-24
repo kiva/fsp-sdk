@@ -23,7 +23,7 @@ It is fine if the API sends information for some but not all fields required to 
 
 Depending on if you are posting a group or individual loan, certain fields are not required. If the loan you are posting is an individual loan, and you send data that is specific to a group loan, PA2 will give you an error message and you will be unable to publish the loan.
 
-If posting an individual loan, do not include any of the following fields. The following fields are required **only when posting a group loan**:
+If posting an individual loan, do not include any of the following fields. **The following fields are required only when posting a group loan:**
 
 * `group_name`: this is the name of the group that will appear on Kiva.org.
 * `internal_client_id`: this is the ID of each client represented within the group (for example, if a group has three members, each member might have their own client ID that should be listed here)

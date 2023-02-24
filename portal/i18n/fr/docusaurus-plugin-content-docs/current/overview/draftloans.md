@@ -20,7 +20,7 @@ Il n'y a pas de problème si l'API n'envoie pas d'informations pour certains cha
 
 Lorsque vous publiez un prêt collectif ou individuel, certains champs ne sont pas obligatoires. Si le prêt que vous publiez est un prêt individuel, et que vous soumettez des données spécifiques à un prêt collectif, PA2 vous donnera un message d'erreur et vous ne pourrez pas publier le prêt.
 
-Si un prêt individuel est comptabilisé, aucune des zones suivantes ne doit être incluse. Les champs suivants sont uniquement requis lors de la publication d'un prêt de groupe :
+Si un prêt individuel est comptabilisé, aucune des zones suivantes ne doit être incluse. **Les champs suivants sont uniquement requis lors de la publication d'un prêt de groupe :**
 * `group_name`: il s'agit du nom du groupe qui apparaîtra sur Kiva.org.
 * `internal_client_id`: est l'ID de chaque client représenté dans le groupe (par exemple, si un groupe compte trois membres, chacun d'entre eux peut avoir son propre ID de client à énumérer ici).
 * `internal_loan_id`: il s'agit de l'ID de chaque prêt individuel (par exemple, un membre du groupe pourrait obtenir son troisième prêt auprès de l'organisation, et ce prêt pourrait avoir un ID unique). Entrez ce numéro d'identification ici)
