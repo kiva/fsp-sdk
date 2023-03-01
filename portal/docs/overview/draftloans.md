@@ -12,11 +12,12 @@ We recommend that your technical team consults with the Kiva Coordinator at your
 
 ### Process
 
-Information for a new loan is sent from MIS to PA2 via the API
-A draft profile is automatically created. Drafts can be viewed by clicking the “Drafts” link in the “Loans” box on the PA2 homepage.
-Each draft must be reviewed and then published by a person.
+* Information for a new loan is sent from MIS to PA2 via the API
+* A draft profile is automatically created. Drafts can be viewed by clicking the “Drafts” link in the “Loans” box on the PA2 homepage.
+* Each draft must be reviewed and then published by a person.
 
 ### Additional information
+
 Before the loan can be published, PA2 will run all of the same validation checks that it runs on loans posted without the API. All error messages will need to be resolved before the loan can be published.
 
 It is fine if the API sends information for some but not all fields required to post a loan. For example, not all MIS's store Kiva-specific fields such as the borrower description or sector. While these fields are required to publish a loan on PA2, they are not required to be sent via the API. The information for these fields can be added manually after the draft loan has been created in PA2. Note that the more information you can send via the API, the more time savings the Kiva Coordinator will have.
@@ -31,6 +32,34 @@ If posting an individual loan, do not include any of the following fields. **The
 * `not_pictured`: use this field in case any borrower is listed in Step 1: Description does not appear in the photo
 
 The borrower photo can be sent to PA2 as a base-64 encoded image. Repayment Schedules can be sent in several different formats. If you believe a format different from the one in the example below will work better for your organization, please let Kiva know and we will provide more information.
+
+### Loan Draft Configurations
+
+To create a fully-populated loan draft, there are several fields which must be populated with inputs that are defined in Kiva's system. Each of these identifiers can be retrieved through Kiva's `config` APIs. **Please note that these APIs are read-only**.
+
+You can find example calls to these endpoints in our [Postman collection](https://github.com/kiva/fps-sdk/tree/main/samples/postman).
+
+#### From PA2 - Step 1: Description
+* **1**: `location` - This must be populated with a location that is currently defined in Kiva's system. Locations are managed in the Account -> Locations section in PA2.
+  * [GET Partner Locations](https://partner-api.k1.kiva.org/swagger-ui/#/partner-configurations/locationConfigsRouteUsingGET)
+* **2**: `activity_id` - This must be populated with the identifier of the Loan Activity.
+  * [GET Loan Activities](https://partner-api.k1.kiva.org/swagger-ui/#/partner-configurations/activityConfigsRouteUsingGET)
+* **3** `description_language_id` - The ID of the language that the loan description is written in.
+  * [GET Locales](https://partner-api.k1.kiva.org/swagger-ui/#/partner-configurations/localeConfigsRouteUsingGET)
+
+When populated on the Loan Draft, these fields will show up in PA2 as follows:
+![loandraft_step1.png](@site/static/img/pa2/loandraft_step1.png)
+
+*Note that the Primary Sector field is set automatically from the provided Activity.*
+
+#### From PA2 - Step 2: Loan Terms
+* **4**: `theme_type_id` - This must be populated with the identifier of the Loan Theme. This is a broader classification of the loan than the Loan Activity that is relevant to the terms and conditions agreed upon by the partner.
+  * [GET Loan Themes](https://partner-api.k1.kiva.org/swagger-ui/#/partner-configurations/themeConfigsRouteUsingGET)
+* **5**: `currency` - The ISO currency code for the currency corresponding to the amount the borrower is requesting.
+  * [GET Locales](https://partner-api.k1.kiva.org/swagger-ui/#/partner-configurations/localeConfigsRouteUsingGET)
+
+When populated on the Loan Draft, these fields will show up in PA2 as follows:
+![loandraft_step2.png](@site/static/img/pa2/loandraft_step2.png)
 
 ## Validation
 To check if the JSON document you created is correct, you can use an online JSON validator like this one:  https://jsonlint.com/.
