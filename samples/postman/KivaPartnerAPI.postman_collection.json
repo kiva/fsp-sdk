@@ -7,6 +7,214 @@
 	},
 	"item": [
 		{
+			"name": "Loan Drafting",
+			"item": [
+				{
+					"name": "Activities [GET]",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://partner-api-stage.dk1.kiva.org/v3/partner/{{PARTNER_ID}}/config/activities",
+							"protocol": "https",
+							"host": [
+								"partner-api-stage",
+								"dk1",
+								"kiva",
+								"org"
+							],
+							"path": [
+								"v3",
+								"partner",
+								"{{PARTNER_ID}}",
+								"config",
+								"activities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Locales [GET]",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://partner-api-stage.dk1.kiva.org/v3/partner/{{PARTNER_ID}}/config/locales",
+							"protocol": "https",
+							"host": [
+								"partner-api-stage",
+								"dk1",
+								"kiva",
+								"org"
+							],
+							"path": [
+								"v3",
+								"partner",
+								"{{PARTNER_ID}}",
+								"config",
+								"locales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Loan Themes [GET]",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://partner-api-stage.dk1.kiva.org/v3/partner/{{PARTNER_ID}}/config/themes",
+							"protocol": "https",
+							"host": [
+								"partner-api-stage",
+								"dk1",
+								"kiva",
+								"org"
+							],
+							"path": [
+								"v3",
+								"partner",
+								"{{PARTNER_ID}}",
+								"config",
+								"themes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Locations [GET]",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://partner-api-stage.dk1.kiva.org/v3/partner/{{PARTNER_ID}}/config/locations",
+							"protocol": "https",
+							"host": [
+								"partner-api-stage",
+								"dk1",
+								"kiva",
+								"org"
+							],
+							"path": [
+								"v3",
+								"partner",
+								"{{PARTNER_ID}}",
+								"config",
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Loan Draft [POST]",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{AUTH_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"client_waiver_signed\": true,\n  \"description\": \"\",\n  \"loanuse\": \"\",\n  \"entreps\": [\n    {\n      \"amount\": 0,\n      \"loan_id\": \"\",\n      \"client_id\": \"\",\n      \"first_name\": \"\",\n      \"last_name\": \"\",\n      \"gender\": \"\"\n    }\n  ],\n  \"schedule\": [\n    {\n      \"date\": \"YYYY-MM-DD\",\n      \"interest\": 0,\n      \"principal\": 0\n    }\n  ],\n  \"disburse_time\": \"YYYY-MM-DD\"\n}"
+						},
+						"url": {
+							"raw": "https://partner-api-stage.dk1.kiva.org/v3/partner/{{PARTNER_ID}}/loan_draft",
+							"protocol": "https",
+							"host": [
+								"partner-api-stage",
+								"dk1",
+								"kiva",
+								"org"
+							],
+							"path": [
+								"v3",
+								"partner",
+								"{{PARTNER_ID}}",
+								"loan_draft"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Authorization [POST]",
 			"event": [
 				{
@@ -81,53 +289,6 @@
 					"path": [
 						"oauth",
 						"token"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Loan Draft [POST]",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{AUTH_TOKEN}}",
-						"type": "text"
-					},
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"client_waiver_signed\": true,\n  \"description\": \"\",\n  \"loanuse\": \"\",\n  \"entreps\": [\n    {\n      \"amount\": 0,\n      \"loan_id\": \"\",\n      \"client_id\": \"\",\n      \"first_name\": \"\",\n      \"last_name\": \"\",\n      \"gender\": \"\"\n    }\n  ],\n  \"schedule\": [\n    {\n      \"date\": \"YYYY-MM-DD\",\n      \"interest\": 0,\n      \"principal\": 0\n    }\n  ],\n  \"disburse_time\": \"YYYY-MM-DD\"\n}"
-				},
-				"url": {
-					"raw": "https://partner-api-stage.dk1.kiva.org/v3/partner/{{PARTNER_ID}}/loan_draft",
-					"protocol": "https",
-					"host": [
-						"partner-api-stage",
-						"dk1",
-						"kiva",
-						"org"
-					],
-					"path": [
-						"v3",
-						"partner",
-						"{{PARTNER_ID}}",
-						"loan_draft"
 					]
 				}
 			},
