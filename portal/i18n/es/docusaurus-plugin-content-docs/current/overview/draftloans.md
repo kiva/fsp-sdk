@@ -32,6 +32,34 @@ Si se publica un préstamo individual, no se debe incluir ninguno de los siguien
  
 La foto del prestatario puede ser enviada a PA2 a través de la API. Los calendarios de reembolso pueden enviarse en varios formatos diferentes. Si cree que un formato diferente al del ejemplo siguiente funcionará mejor para su organización, comuníquelo a Kiva y le proporcionaremos más información. Para comprobar si el documento JSON que has creado es correcto, puedes utilizar un validador de JSON online como este: https://jsonlint.com/.
 
+### Configuraciones para los Borradores de préstamos
+
+Para crear un borrador de préstamo con los campos completamente diligenciados, hay varios campos que deben rellenarse con códigos/comandos que se definen en el sistema de Kiva. Cada uno de estos comandos puede recuperarse a través de las configuraciones de las API. **Tenga en cuenta que estas API son de sólo lectura.**
+
+Puede encontrar ejemplos de llamadas a estos puntos finales en nuestra [colección Postman](https://github.com/kiva/fps-sdk/tree/main/samples/postman).
+
+#### Desde PA2 - Paso 1: Descripción
+* **1**: `location` - Debe completarse con una ubicación definida actualmente en el sistema de Kiva. Las ubicaciones se gestionan en la sección Cuenta -> Ubicaciones en PA2.
+    * [GET Partner Locations](https://partner-api.k1.kiva.org/swagger-ui/#/partner-configurations/locationConfigsRouteUsingGET)
+* **2**: `activity_id` - Debe completarse con el descriptor de la Actividad del Préstamo.
+    * [GET Loan Activities](https://partner-api.k1.kiva.org/swagger-ui/#/partner-configurations/activityConfigsRouteUsingGET)
+* **3**: `description_language_id` - Debe completarse con el descriptor de la Actividad del Préstamo. 
+    * [GET Locales](https://partner-api.k1.kiva.org/swagger-ui/#/partner-configurations/localeConfigsRouteUsingGET)
+
+Al introducirse en el Borrador del Préstamo, estos campos aparecerán en PA2 de esta manera
+![loandraft_step1.png](@site/static/img/pa2/loandraft_step1.png)
+
+*Tenga en cuenta que el campo Sector Principal se establece automáticamente a partir de la Actividad proporcionada.*
+
+#### De PA2 - Paso 2: Condiciones del Préstamo
+* **4**: `theme_type_id` - Debe rellenarse con el identificador de la Campaña de Préstamo. Se trata de una clasificación del préstamo más amplia que la Actividad de Préstamo que es relevante para los términos y condiciones acordados por el socio.
+    * [GET Loan Themes](https://partner-api.k1.kiva.org/swagger-ui/#/partner-configurations/themeConfigsRouteUsingGET)
+* **5**: `currency` - El código ISO de la divisa correspondiente al importe que solicita el prestatario.
+    * [GET Locales](https://partner-api.k1.kiva.org/swagger-ui/#/partner-configurations/localeConfigsRouteUsingGET)
+
+Cuando se rellenan en el Borrador del Préstamo, estos campos aparecerán en PA2 de la siguiente manera:
+![loandraft_step2.png](@site/static/img/pa2/loandraft_step2.png)
+
 ## Documentación técnica
 Toda la documentación técnica de Kiva, incluidos los puntos finales, puede encontrarse aquí:
 * Entorno de pruebas (Stage): https://partner-api-stage.dk1.kiva.org/swagger-ui/

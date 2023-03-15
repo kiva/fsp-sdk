@@ -44,7 +44,7 @@ You can find example calls to these endpoints in our [Postman collection](https:
   * [GET Partner Locations](https://partner-api.k1.kiva.org/swagger-ui/#/partner-configurations/locationConfigsRouteUsingGET)
 * **2**: `activity_id` - This must be populated with the identifier of the Loan Activity.
   * [GET Loan Activities](https://partner-api.k1.kiva.org/swagger-ui/#/partner-configurations/activityConfigsRouteUsingGET)
-* **3** `description_language_id` - The ID of the language that the loan description is written in.
+* **3**: `description_language_id` - The ID of the language that the loan description is written in.
   * [GET Locales](https://partner-api.k1.kiva.org/swagger-ui/#/partner-configurations/localeConfigsRouteUsingGET)
 
 When populated on the Loan Draft, these fields will show up in PA2 as follows:
