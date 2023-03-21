@@ -28,6 +28,34 @@ Si un prêt individuel est comptabilisé, aucune des zones suivantes ne doit êt
 
 La photo de l'emprunteur peut être envoyée à PA2 avec l’API. Les tableaux de remboursement peuvent être envoyés dans plusieurs formats différents. Si vous pensez qu'un format différent de l'exemple ci-dessous conviendrait mieux à votre organisation, veuillez en informer Kiva et nous vous fournirons de plus amples informations. Pour vérifier si le document JSON que vous avez créé est correct, vous pouvez utiliser un validateur JSON en ligne comme celui-ci : https://jsonlint.com/ .
 
+### Paramètres pour les projets de crédit
+
+Pour créer un  projets de crédit entièrement remplie, plusieurs champs doivent être saisis avec des entrées définies dans le système Kiva. Chacun de ces identifiants peut être extrait par le biais des paramètres de l'API de Kiva. **Veuillez noter que ces APIs sont en mode lecture seule.**
+
+Vous pouvez trouver des exemples d'appels à ces points de terminaison sur notre [collection Postman](https://github.com/kiva/fps-sdk/tree/main/samples/postman).
+
+#### À partir de PA2 - Étape 1 : Description
+* **1**: `location` - Ce champ doit être rempli avec une localité qui est actuellement définie sur le système Kiva. Les emplacements sont gérés dans la section Compte -> Localités sur PA2.
+    * [GET Partner Locations](https://partner-api.k1.kiva.org/swagger-ui/#/partner-configurations/locationConfigsRouteUsingGET)
+* **2**: `activity_id` - Ce champ doit contenir l'identifiant de l'activité de prêt.
+    * [GET Loan Activities](https://partner-api.k1.kiva.org/swagger-ui/#/partner-configurations/activityConfigsRouteUsingGET)
+* **3**: `description_language_id` - L'identifiant de la langue dans laquelle la description du prêt est rédigée.
+    * [GET Locales](https://partner-api.k1.kiva.org/swagger-ui/#/partner-configurations/localeConfigsRouteUsingGET)
+
+Lorsqu'ils sont saisis dans le projet de crédit, ces champs s'affichent sur PA2 comme suit :
+![loandraft_step1.png](@site/static/img/pa2/loandraft_step1.png)
+
+*Notez que le champ Secteur d'Activité Primaire est défini automatiquement à partir de l'Activité fournie.*
+
+#### À partir de PA2 - Étape 2 : Modalités de Prêt
+* **4**: `theme_type_id` - Ce champ doit contenir l'identifiant selon l'Initiative Spéciale. Il s'agit d'une classification plus large du prêt que l'Activité de Prêt, qui est pertinente pour les termes et conditions convenus par le partenaire.
+    * [GET Loan Themes](https://partner-api.k1.kiva.org/swagger-ui/#/partner-configurations/themeConfigsRouteUsingGET)
+* **5**: `currency` - Code ISO de la devise correspondant au montant demandé par l'emprunteur/euse.
+    * [GET Locales](https://partner-api.k1.kiva.org/swagger-ui/#/partner-configurations/localeConfigsRouteUsingGET)
+
+Lorsqu'ils sont renseignés dans Leprojets de crédit, ces champs s'affichent sur PA2 comme suit :
+![loandraft_step2.png](@site/static/img/pa2/loandraft_step2.png)
+
 ## Documentation technique
 Toda la documentación técnica de Kiva, incluidos los puntos finales, puede encontrarse aquí:
 * Environnement de test (Stage) https://partner-api-stage.dk1.kiva.org/swagger-ui/
