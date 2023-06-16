@@ -1,6 +1,11 @@
-﻿using System.Net.Http.Headers;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Net.Http.Headers;
 using System.Net;
+using System.Net.Http;
 using System.Text.Json;
+using System.Threading.Tasks;
 
 
 /*
@@ -9,11 +14,16 @@ using System.Text.Json;
 
 string PartnerId = "";
 string BearerToken = "";
-string domain = "dk1.kiva.org";
+string AuthDomain = "auth-stage.dk1.kiva.org"; 
+string PartnerDomain = "partner-api-stage.dk1.kiva.org";
 
 
 /*
    functions
+*/
+
+/*
+    Please see the auth sample for discussion of how the authorization is expected to work
 */
 async Task GetAuthorizationToken()
 {
@@ -32,7 +42,7 @@ async Task GetAuthorizationToken()
 
     var encodedContent = new FormUrlEncodedContent(parameters);
 
-    var response = await client.PostAsync($"https://auth-stage.{domain}/oauth/token", encodedContent);
+    var response = await client.PostAsync($"https://{AuthDomain}/oauth/token", encodedContent);
 
     if (response.StatusCode == HttpStatusCode.OK)
     {
@@ -43,8 +53,11 @@ async Task GetAuthorizationToken()
         PartnerId = kivaAuthorization.PartnerId;
         BearerToken = kivaAuthorization.AuthToken;
 
-    } else {
-        Console.WriteLine($"error: {response.StatusCode}");
+    } 
+    else 
+    {
+        string result = await response.Content.ReadAsStringAsync();
+        Console.WriteLine($"error: {response.StatusCode}: {result}");
         System.Environment.Exit(1);
     }
 
@@ -58,13 +71,17 @@ async Task GetLoans()
         new MediaTypeWithQualityHeaderValue("application/json"));
     client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", BearerToken);
 
-    var response = await client.GetAsync($"https://partner-api-stage.{domain}/v3/partner/{PartnerId}/loans");
-    if (response.StatusCode == HttpStatusCode.OK) {
-        var json = await response.Content.ReadAsStringAsync();
+    var response = await client.GetAsync($"https://{PartnerDomain}/v3/partner/{PartnerId}/loans");
+    
+    var json = await response.Content.ReadAsStringAsync();
+    
+    if (response.StatusCode == HttpStatusCode.OK) 
+    {
         Console.WriteLine($"\r\nGet Loans returned: \r\n {json}\r\n");
-
-    } else {
-        Console.WriteLine($"error: {response.StatusCode}");
+    } 
+    else 
+    {
+        Console.WriteLine($"error: {response.StatusCode}: {json}");
     }
 }
 

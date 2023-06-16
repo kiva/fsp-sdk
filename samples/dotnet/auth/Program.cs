@@ -30,7 +30,8 @@ client.DefaultRequestHeaders.Accept.Add(
 // details are documented in
 // https://kivapartnerhelpcenter.zendesk.com/hc/en-us/articles/360051231131-API-authentication-client-credential-flow-
 // expectation with this example is that these values were set as environment variables
-var parameters = new Dictionary<string, string> {
+var parameters = new Dictionary<string, string> 
+{
     { "client_id", clientId },
     { "client_secret", clientSecret },
     { "audience", audience },
@@ -49,12 +50,13 @@ var response = await client.PostAsync($"https://{domain}/oauth/token", encodedCo
 
 
 // process the response
-if (response.StatusCode == HttpStatusCode.OK) {
+if (response.StatusCode == HttpStatusCode.OK) 
+{
     var json = await response.Content.ReadAsStringAsync();
     Console.WriteLine($"\r\nResults returned: \r\n {json}\r\n");
-} else {
-    Stream receiveStream = response.Content.ReadAsStream();
-    StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
-    string content = readStream.ReadToEnd();
-    Console.WriteLine($"error: {response.StatusCode}: {content}");
+} 
+else
+{
+    string result = await response.Content.ReadAsStringAsync();
+    Console.WriteLine($"error: {response.StatusCode}: {result}");
 }

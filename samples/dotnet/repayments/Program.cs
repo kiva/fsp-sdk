@@ -22,6 +22,11 @@ string PartnerDomain = "partner-api-stage.dk1.kiva.org";
 /*
    functions
 */
+
+
+/*
+    Please see the auth sample project for discussion how authorization works
+*/
 async Task GetAuthorizationToken()
 {
     using HttpClient client = new();
@@ -29,7 +34,8 @@ async Task GetAuthorizationToken()
     client.DefaultRequestHeaders.Accept.Add(
         new MediaTypeWithQualityHeaderValue("application/json"));
 
-    var parameters = new Dictionary<string, string> {
+    var parameters = new Dictionary<string, string> 
+    {
         { "client_id", System.Environment.GetEnvironmentVariable("client_id") },
         { "client_secret", System.Environment.GetEnvironmentVariable("client_secret") },
         { "audience", System.Environment.GetEnvironmentVariable("audience") },
@@ -49,13 +55,30 @@ async Task GetAuthorizationToken()
         PartnerId = kivaAuthorization.PartnerId;
         BearerToken = kivaAuthorization.AuthToken;
 
-    } else {
-        Console.WriteLine($"error: {response.StatusCode}");
+    } 
+    else 
+    {
+        string result = await response.Content.ReadAsStringAsync();
+        Console.WriteLine($"error: {response.StatusCode}: {result}");
         System.Environment.Exit(1);
     }
 
 }
 
+/*
+    The expectation is the JSON is in the format like:
+    
+    {   
+         "repayments": 
+         [
+             {"loan_id":"loan_id_1","amount":480.00},
+             {"loan_id":"loan_id_2","amount":500.00}
+         ],
+         "user_id": 1234356
+    } 
+    
+    You can use the classes in the file Repayment.Classes.cs to generate this json as well
+*/
 StringContent GetJsonData()
 {
     string allText = File.ReadAllText(dataFileName);

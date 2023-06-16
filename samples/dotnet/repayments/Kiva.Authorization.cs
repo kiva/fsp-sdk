@@ -5,4 +5,3 @@ record class KivaAuthorization(
         [property: JsonPropertyName("partnerId")] string PartnerId
     );
     
-    //  token_type scope expires_in iss jti
