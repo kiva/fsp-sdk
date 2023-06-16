@@ -1,11 +1,17 @@
 ﻿using System.Net.Http.Headers;
 using System.Net;
+using System.Text;
 
+string domain = "auth-stage.dk1.kiva.org";
 string clientId = System.Environment.GetEnvironmentVariable("client_id");
 string clientSecret = System.Environment.GetEnvironmentVariable("client_secret");
+string audience = System.Environment.GetEnvironmentVariable("audience");
+string scope = System.Environment.GetEnvironmentVariable("scope");
 
-Console.WriteLine($"getting autho token using client_id {clientId}");
-Console.WriteLine($"\t with secret '{clientSecret}'");
+Console.WriteLine($"getting autho token using client_id '{clientId}'");
+Console.WriteLine($"\tsecret: '{clientSecret}'");
+Console.WriteLine($"\taudience: '{audience}'");
+Console.WriteLine($"\tscope: '{scope}'");
 
 // create the http client
 using HttpClient client = new();
@@ -23,17 +29,19 @@ client.DefaultRequestHeaders.Accept.Add(
 var parameters = new Dictionary<string, string> {
     { "client_id", clientId },
     { "client_secret", clientSecret },
-    { "audience", System.Environment.GetEnvironmentVariable("audience") },
+    { "audience", audience },
     { "grant_type", "client_credentials" },
-    { "scope", System.Environment.GetEnvironmentVariable("scope") }
+    { "scope", scope }
 };
+
+
 
 // since the API expects the details to be posted as x-www-form-urlencoded
 // we have to properly encode each value
 var encodedContent = new FormUrlEncodedContent(parameters);
 
 // make the call
-var response = await client.PostAsync("https://auth-stage.dk1.kiva.org/oauth/token", encodedContent);
+var response = await client.PostAsync($"https://{domain}/oauth/token", encodedContent);
 
 
 // process the response
@@ -41,5 +49,8 @@ if (response.StatusCode == HttpStatusCode.OK) {
     var json = await response.Content.ReadAsStringAsync();
     Console.WriteLine($"\r\nResults returned: \r\n {json}\r\n");
 } else {
-    Console.WriteLine($"error: {response.StatusCode}");
+    Stream receiveStream = response.Content.ReadAsStream();
+    StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8);
+    string content = readStream.ReadToEnd();
+    Console.WriteLine($"error: {response.StatusCode}: {content}");
 }

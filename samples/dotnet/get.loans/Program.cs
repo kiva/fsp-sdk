@@ -9,7 +9,7 @@ using System.Text.Json;
 
 string PartnerId = "";
 string BearerToken = "";
-
+string domain = "dk1.kiva.org";
 
 
 /*
@@ -32,7 +32,7 @@ async Task GetAuthorizationToken()
 
     var encodedContent = new FormUrlEncodedContent(parameters);
 
-    var response = await client.PostAsync("https://auth-stage.dk1.kiva.org/oauth/token", encodedContent);
+    var response = await client.PostAsync($"https://auth-stage.{domain}/oauth/token", encodedContent);
 
     if (response.StatusCode == HttpStatusCode.OK)
     {
@@ -58,7 +58,7 @@ async Task GetLoans()
         new MediaTypeWithQualityHeaderValue("application/json"));
     client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", BearerToken);
 
-    var response = await client.GetAsync($"https://partner-api-stage.dk1.kiva.org/v3/partner/{PartnerId}/loans");
+    var response = await client.GetAsync($"https://partner-api-stage.{domain}/v3/partner/{PartnerId}/loans");
     if (response.StatusCode == HttpStatusCode.OK) {
         var json = await response.Content.ReadAsStringAsync();
         Console.WriteLine($"\r\nGet Loans returned: \r\n {json}\r\n");
