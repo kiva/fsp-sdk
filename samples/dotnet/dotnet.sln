@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "get.loans", "get.loans\get.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "repayments", "repayments\repayments.csproj", "{14095BF2-891A-4CDB-BE13-CCAF3CF78CE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "loan.draft", "loan.draft\loan.draft.csproj", "{7E746C1F-5E24-4B76-B83F-E71B3B5ED4F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{14095BF2-891A-4CDB-BE13-CCAF3CF78CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14095BF2-891A-4CDB-BE13-CCAF3CF78CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14095BF2-891A-4CDB-BE13-CCAF3CF78CE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E746C1F-5E24-4B76-B83F-E71B3B5ED4F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E746C1F-5E24-4B76-B83F-E71B3B5ED4F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E746C1F-5E24-4B76-B83F-E71B3B5ED4F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E746C1F-5E24-4B76-B83F-E71B3B5ED4F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

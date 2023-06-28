@@ -7,7 +7,7 @@ public class ActivityItem
     public string Activity { get; set; } = string.Empty;
 
     [JsonPropertyName("activity_id")]
-    public int Id { get; set; } = -1;
+    public int ActivityId { get; set; } = -1;
 }
 
 public class ActivityList
@@ -61,7 +61,6 @@ public class Theme
     public string ThemeType { get; set; }
 }
 
-
 public class Location
 {
     [JsonPropertyName("country")]
@@ -82,4 +81,90 @@ public class LocationList
     [JsonPropertyName("locations")]
     public List<Location> Locations { get; set; } = new ();
 }
+
+public class Entrep
+{
+    [JsonPropertyName("amount")]
+    public int Amount { get; set; }
+
+    [JsonPropertyName("client_id")]
+    public string ClientId { get; set; }
+
+    [JsonPropertyName("first_name")]
+    public string FirstName { get; set; }
+
+    [JsonPropertyName("gender")]
+    public string Gender { get; set; }
+
+    [JsonPropertyName("last_name")]
+    public string LastName { get; set; }
+
+    [JsonPropertyName("loan_id")]
+    public string LoanId { get; set; }
+}
+
+public class LoanDraft
+{
+    [JsonPropertyName("activity_id")]
+    public int ActivityId { get; set; }
+
+    [JsonPropertyName("client_waiver_signed")]
+    public bool ClientWaiverSigned { get; set; }
+
+    [JsonPropertyName("currency")]
+    public string Currency { get; set; }
+
+    [JsonPropertyName("description")]
+    public string Description { get; set; }
+
+    [JsonPropertyName("description_language_id")]
+    public int DescriptionLanguageId { get; set; }
+
+    [JsonPropertyName("disburse_time")]
+    public string DisburseTime { get; set; }
+
+    [JsonPropertyName("entreps")]
+    public List<Entrep> Entreps { get; set; } = new ();
+
+    [JsonPropertyName("group_name")]
+    public string GroupName { get; set; }
+
+    [JsonPropertyName("image_encoded")]
+    public string ImageEncoded { get; set; }
+
+    [JsonPropertyName("internal_client_id")]
+    public string InternalClientId { get; set; }
+
+    [JsonPropertyName("internal_loan_id")]
+    public string InternalLoanId { get; set; }
+
+    [JsonPropertyName("loanuse")]
+    public string Loanuse { get; set; }
+
+    [JsonPropertyName("location")]
+    public string Location { get; set; }
+
+    [JsonPropertyName("not_pictured")]
+    public List<bool> NotPictured { get; set; } = new ();
+
+    [JsonPropertyName("schedule")]
+    public List<Schedule> Schedule { get; set; } = new ();
+
+    [JsonPropertyName("theme_type_id")]
+    public int ThemeTypeId { get; set; }
+}
+
+public class Schedule
+{
+    [JsonPropertyName("date")]
+    public string Date { get; set; }
+
+    [JsonPropertyName("interest")]
+    public int Interest { get; set; }
+
+    [JsonPropertyName("principal")]
+    public int Principal { get; set; }
+}
+
+
 

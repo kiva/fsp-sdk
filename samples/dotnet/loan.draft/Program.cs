@@ -174,7 +174,66 @@ async Task GetLocations()
 // ---------------------------------------------------------------------------
 async Task PostLoanDraft()
 {
-    throw new NotImplementedException();
+    // create the loan
+    LoanDraft loan = new();
+    loan.ThemeTypeId = themes.Themes[0].ThemeTypeId;
+    loan.Location = locations.Locations[1].FullName;
+    loan.ActivityId = activities.Activities[0].ActivityId;
+    loan.DescriptionLanguageId = locales.Locales[0].LanguageId;
+    loan.Currency = locales.Locales[0].Currency;
+    loan.InternalLoanId = "888888";
+    loan.InternalClientId = "888888";
+    loan.Description = "Test loan";
+    loan.DisburseTime = "2023-12-01";
+    loan.GroupName = "No Group";
+
+    Entrep entrep = new Entrep()
+    {
+        Amount = 500,
+        ClientId = "88",
+        FirstName = "Test",
+        Gender = "unknown",
+        LastName = "Borrower",
+        LoanId = "88"
+    };
+    
+    loan.Entreps.Add(entrep);
+    loan.NotPictured.Add(false);
+
+    Schedule schedule = new Schedule()
+    {
+        Date = "2023-12-31",
+        Interest = 50,
+        Principal = 500
+    };
+    
+    loan.Schedule.Add(schedule);
+
+    // convert to serialized data
+    string loanJson = JsonSerializer.Serialize(loan);
+    var content = new StringContent(loanJson, Encoding.UTF8, "application/json");
+    
+    // post it
+    using HttpClient client = new();
+    client.DefaultRequestHeaders.Accept.Clear();
+    client.DefaultRequestHeaders.Accept.Add(
+        new MediaTypeWithQualityHeaderValue("application/json"));
+    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", BearerToken);
+
+    var response = await client.PostAsync($"https://{PartnerDomain}/v3/partner/{PartnerId}/loan_draft",
+        content);
+    
+    if (response.StatusCode == HttpStatusCode.OK)
+    {
+        var result = await response.Content.ReadAsStringAsync();
+        Console.WriteLine($"Loan Posted: {result}");
+    } 
+    else 
+    {
+        var result = await response.Content.ReadAsStringAsync();
+        Console.WriteLine($"error: {response.StatusCode}: {result}");
+        throw new ApplicationException();
+    }
 }
 
 
@@ -185,8 +244,9 @@ async Task PostLoanDraft()
 
 
 Console.WriteLine("Kiva Partner API example loans draft");
+Console.WriteLine("\r\n\tsee  https://fps-sdk-portal.web.app/docs/overview/draftloans/ for more information");
 
-Console.WriteLine("\t -- Step 1 Getting authorization token");
+Console.WriteLine("\r\n\r\n\t -- Step 1 Getting authorization token");
 await GetAuthorizationToken();
 Console.WriteLine($"\t Authorization Received for Partner: {PartnerId}");
 
