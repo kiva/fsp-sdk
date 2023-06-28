@@ -209,6 +209,13 @@ async Task PostLoanDraft()
     
     loan.Schedule.Add(schedule);
 
+    if (File.Exists("pic.jpg"))
+    {
+        var imageContents = File.ReadAllBytes("pic.jpg");
+        loan.ImageEncoded = $"data:image/png;base64,{Convert.ToBase64String(imageContents)}";
+    }
+
+
     // convert to serialized data
     string loanJson = JsonSerializer.Serialize(loan);
     var content = new StringContent(loanJson, Encoding.UTF8, "application/json");
