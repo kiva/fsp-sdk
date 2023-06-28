@@ -1,30 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Net.Http.Headers;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
 
-// ---------------------------------------------------------------------------
-// Data
-// ---------------------------------------------------------------------------
-
-
 string PartnerId = "";
 string BearerToken = "";
+string dataFileName = "data.json";
 string AuthDomain = "auth-stage.dk1.kiva.org"; 
 string PartnerDomain = "partner-api-stage.dk1.kiva.org";
 
-
 // ---------------------------------------------------------------------------
 //   functions
+// ---------------------------------------------------------------------------
 
 
 // ---------------------------------------------------------------------------
-// Please see the auth sample for discussion of how the authorization is expected to work
+// Please see the auth sample project for discussion how authorization works
 async Task GetAuthorizationToken()
 {
     using HttpClient client = new();
@@ -32,7 +29,8 @@ async Task GetAuthorizationToken()
     client.DefaultRequestHeaders.Accept.Add(
         new MediaTypeWithQualityHeaderValue("application/json"));
 
-    var parameters = new Dictionary<string, string> {
+    var parameters = new Dictionary<string, string> 
+    {
         { "client_id", System.Environment.GetEnvironmentVariable("client_id") },
         { "client_secret", System.Environment.GetEnvironmentVariable("client_secret") },
         { "audience", System.Environment.GetEnvironmentVariable("audience") },
@@ -49,7 +47,6 @@ async Task GetAuthorizationToken()
         using Stream responseBody = await response.Content.ReadAsStreamAsync();
         var kivaAuthorization = await JsonSerializer.DeserializeAsync<KivaAuthorization>(responseBody);
         
-        // TODO: parse out auth token and partner id
         PartnerId = kivaAuthorization.PartnerId;
         BearerToken = kivaAuthorization.AuthToken;
 
@@ -64,37 +61,24 @@ async Task GetAuthorizationToken()
 }
 
 // ---------------------------------------------------------------------------
-async Task GetLoans()
+async Task PostLoanDraft()
 {
-    using HttpClient client = new();
-    client.DefaultRequestHeaders.Accept.Clear();
-    client.DefaultRequestHeaders.Accept.Add(
-        new MediaTypeWithQualityHeaderValue("application/json"));
-    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", BearerToken);
-
-    var response = await client.GetAsync($"https://{PartnerDomain}/v3/partner/{PartnerId}/loans");
-    
-    var json = await response.Content.ReadAsStringAsync();
-    
-    if (response.StatusCode == HttpStatusCode.OK) 
-    {
-        Console.WriteLine($"\r\nGet Loans returned: \r\n {json}\r\n");
-    } 
-    else 
-    {
-        Console.WriteLine($"error: {response.StatusCode}: {json}");
-    }
+    throw new NotImplementedException();
 }
+
 
 
 // ---------------------------------------------------------------------------
 // Program execution
 // ---------------------------------------------------------------------------
 
-Console.WriteLine("Kiva Partner API for listing loans");
-Console.WriteLine("    -- Step 1 Getting authorization token");
+
+Console.WriteLine("Kiva Partner API example loans draft");
+
+Console.WriteLine("\t -- Step 1 Getting authorization token");
 await GetAuthorizationToken();
+Console.WriteLine($"\t Authorization Received for Partner: {PartnerId}\r\n");
 
 
-Console.WriteLine("    -- Step 2 listing the loans for the partner");
-await GetLoans();
+
+

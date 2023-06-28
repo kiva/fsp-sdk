@@ -40,8 +40,13 @@ Results returned:
 
 ## Running the get loans API example
 1. navigate to the `./samples/dotnet` directory
-2. to run the list loans example, run this command ` dotnet run --project get.loans/get.loans.csproj`
+2. to run the list loans example, run this command `dotnet run --project get.loans/get.loans.csproj`
+
+## Running the loan draft API example
+1. navigate to the `./samples/dotnet` directory
+2. to run the list loans example, run this command `dotnet run --project loan.draft/loan.draft.csproj`
+
 
 ## Running the repayments API example
 1. navigate to the `./samples/dotnet` directory
-2. to run the list loans example, run this command ` dotnet run --project repayments/repayments.csproj`
+2. to run the list loans example, run this command `dotnet run --project repayments/repayments.csproj`

@@ -6,6 +6,10 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 
+// ---------------------------------------------------------------------------
+// Data
+// ---------------------------------------------------------------------------
+
 string domain = "auth-stage.dk1.kiva.org";
 string clientId = System.Environment.GetEnvironmentVariable("client_id");
 string clientSecret = System.Environment.GetEnvironmentVariable("client_secret");
@@ -17,19 +21,25 @@ Console.WriteLine($"\tsecret: '{clientSecret}'");
 Console.WriteLine($"\taudience: '{audience}'");
 Console.WriteLine($"\tscope: '{scope}'");
 
+
+// ---------------------------------------------------------------------------
 // create the http client
 using HttpClient client = new();
 client.DefaultRequestHeaders.Accept.Clear();
 
+// ---------------------------------------------------------------------------
 // set accepted type to json
 client.DefaultRequestHeaders.Accept.Add(
     new MediaTypeWithQualityHeaderValue("application/json"));
 
 
+// ---------------------------------------------------------------------------
 // set the remaining paraemters
 // details are documented in
 // https://kivapartnerhelpcenter.zendesk.com/hc/en-us/articles/360051231131-API-authentication-client-credential-flow-
 // expectation with this example is that these values were set as environment variables
+// ---------------------------------------------------------------------------
+
 var parameters = new Dictionary<string, string> 
 {
     { "client_id", clientId },
@@ -41,14 +51,17 @@ var parameters = new Dictionary<string, string>
 
 
 
+// ---------------------------------------------------------------------------
 // since the API expects the details to be posted as x-www-form-urlencoded
 // we have to properly encode each value
 var encodedContent = new FormUrlEncodedContent(parameters);
 
+// ---------------------------------------------------------------------------
 // make the call
 var response = await client.PostAsync($"https://{domain}/oauth/token", encodedContent);
 
 
+// ---------------------------------------------------------------------------
 // process the response
 if (response.StatusCode == HttpStatusCode.OK) 
 {
@@ -57,6 +70,6 @@ if (response.StatusCode == HttpStatusCode.OK)
 } 
 else
 {
-    string result = await response.Content.ReadAsStringAsync();
+    var result = await response.Content.ReadAsStringAsync();
     Console.WriteLine($"error: {response.StatusCode}: {result}");
 }

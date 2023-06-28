@@ -1,8 +1,4 @@
-﻿/*
-   Data
-*/
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
@@ -12,6 +8,11 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
+
+/*
+   Data
+*/
+
 string PartnerId = "";
 string BearerToken = "";
 string dataFileName = "data.json";
@@ -19,14 +20,13 @@ string AuthDomain = "auth-stage.dk1.kiva.org";
 string PartnerDomain = "partner-api-stage.dk1.kiva.org";
 
 
-/*
-   functions
-*/
+// ---------------------------------------------------------------------------
+// functions
+// ---------------------------------------------------------------------------
 
 
-/*
-    Please see the auth sample project for discussion how authorization works
-*/
+// ---------------------------------------------------------------------------
+// Please see the auth sample project for discussion how authorization works
 async Task GetAuthorizationToken()
 {
     using HttpClient client = new();
@@ -65,20 +65,20 @@ async Task GetAuthorizationToken()
 
 }
 
-/*
-    The expectation is the JSON is in the format like:
-    
-    {   
-         "repayments": 
-         [
-             {"loan_id":"loan_id_1","amount":480.00},
-             {"loan_id":"loan_id_2","amount":500.00}
-         ],
-         "user_id": 1234356
-    } 
-    
-    You can use the classes in the file Repayment.Classes.cs to generate this json as well
-*/
+// ---------------------------------------------------------------------------
+//    The expectation is the JSON is in the format like:
+//    
+//    {   
+//         "repayments": 
+//         [
+//             {"loan_id":"loan_id_1","amount":480.00},
+//             {"loan_id":"loan_id_2","amount":500.00}
+//         ],
+//         "user_id": 1234356
+//    } 
+//    
+//    You can use the classes in the file Repayment.Classes.cs to generate this json as well
+// ---------------------------------------------------------------------------
 StringContent GetJsonData()
 {
     string allText = File.ReadAllText(dataFileName);
@@ -87,6 +87,7 @@ StringContent GetJsonData()
 }
 
 
+// ---------------------------------------------------------------------------
 async Task DoRepayment()
 {
 
@@ -112,6 +113,10 @@ async Task DoRepayment()
     }
 }
 
+
+// ---------------------------------------------------------------------------
+// Program execution
+// ---------------------------------------------------------------------------
 
 Console.WriteLine("Kiva Partner API for repayment on loans");
 Console.WriteLine("\tExample will use 'data.json' in current directory unless the file name is passed in as command line argument");
