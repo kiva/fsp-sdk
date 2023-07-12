@@ -27,6 +27,19 @@ The new Partner API is accessible using an Oauth2 JWT obtained from Kiva’s aut
 * **client_id** - this is the first half of the client credentials. It is accessible from within Partner Admin and directly identifies the Partner within Kiva’s system.
 * **client_secret** - this is the second half of the client credentials. Both It is accessible from within Partner Admin and is required to validate a client credentials request. client_id and client_secret should be treated as sensitive secrets.
 
+### Details on Scope 
+
+Scope identifies which APIs can be accessed.  Use the following table to determine which scope to include:
+
+  
+| Scope                                                      | API                                                                      |  
+|------------------------------------------------------------|--------------------------------------------------------------------------|
+| read:loans | https://partner-api.k1.kiva.org/v3/partner/{id}/loans?limit=20&offset=0  |    
+| create:loan_draft | https://partner-api.k1.kiva.org/v3/partner/{id}/loan_draft               |    
+| create:journal_update                                                 | https://partner-api.k1.kiva.org/v3/partner/{id}/journals                 |    
+| create:repayment                                                  | https://partner-api.k1.kiva.org/v3/partner/{id}/repayments |
+
+Please refer to the [Swagger API documentation](https://partner-api-stage.dk1.kiva.org/swagger-ui/) for specifics on each API. 
 
 ### Response Data (test environment)
 On successful authentication, you should receive a response like the following:
