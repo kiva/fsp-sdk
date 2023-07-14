@@ -28,6 +28,17 @@ Se puede acceder a la nueva API de socios mediante un Oauth2 JWT obtenido del se
 * **client_id** - es la primera mitad de las credenciales del cliente. Es accesible desde Partner Admin e identifica directamente al socio dentro del sistema de Kiva.
 * **client_secret** - esta es la segunda mitad de las credenciales del cliente. Se puede acceder a ella desde Partner Admin y es necesaria para validar una solicitud de credenciales de cliente. client_id y client_secret deben tratarse como secretos sensibles.
 
+### Detalles sobre el "Scope" (Campo de aplicación operativa de la API)
+
+Scope (Campo de aplicación) identifica a qué APIs se puede acceder. Utilice la siguiente tabla para determinar qué campos de aplicación (Scopes) incluir:
+
+| Scope (Alcance Operativo)                                                      | API                                                                      |  
+|------------------------------------------------------------|--------------------------------------------------------------------------|
+| read:loans | https://partner-api.k1.kiva.org/v3/partner/{id}/loans?limit=20&offset=0  |    
+| create:loan_draft | https://partner-api.k1.kiva.org/v3/partner/{id}/loan_draft               |    
+| create:journal_update                                                 | https://partner-api.k1.kiva.org/v3/partner/{id}/journals                 |    
+| create:repayment                                                  | https://partner-api.k1.kiva.org/v3/partner/{id}/repayments |
+
 
 ### Datos de respuesta (entorno de prueba)
 Si la autenticación es exitosa, debería recibir una respuesta como la siguiente:
