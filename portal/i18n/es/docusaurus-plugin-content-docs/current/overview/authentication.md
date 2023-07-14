@@ -39,6 +39,7 @@ Scope (Campo de aplicación) identifica a qué APIs se puede acceder. Utilice la
 | create:journal_update                                                 | https://partner-api.k1.kiva.org/v3/partner/{id}/journals                 |    
 | create:repayment                                                  | https://partner-api.k1.kiva.org/v3/partner/{id}/repayments |
 
+Consulte [la documentación de la API en Swagger](https://partner-api-stage.dk1.kiva.org/swagger-ui/) para obtener información específica sobre cada API.
 
 ### Datos de respuesta (entorno de prueba)
 Si la autenticación es exitosa, debería recibir una respuesta como la siguiente:
