@@ -4,15 +4,20 @@
  */
 
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 class RepaymentHeader
 {
-    public int user_id { get; set; }
+    [JsonPropertyName("repayments")] 
     public List<Repayment> Repayments { get; set; } = new();
 }
 
 class Repayment
 {
-    public string loan_id { get; set; }
-    public decimal amount { get; set; }
+    [JsonPropertyName("loan_id")] 
+    public string LoanId { get; set; }
+    [JsonPropertyName("amount")] 
+    public decimal Amount { get; set; }
+    [JsonPropertyName("client_id")] 
+    public string ClientId { get; set; }
 }

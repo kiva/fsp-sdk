@@ -71,10 +71,9 @@ async Task GetAuthorizationToken()
 //    {   
 //         "repayments": 
 //         [
-//             {"loan_id":"loan_id_1","amount":480.00},
-//             {"loan_id":"loan_id_2","amount":500.00}
-//         ],
-//         "user_id": 1234356
+//             {"loan_id":"loan_id_1","amount":480.00, "client_id":"client_id_1"},
+//             {"loan_id":"loan_id_2","amount":500.00, "client_id":"client_id_2"}
+//         ]
 //    } 
 //    
 //    You can use the classes in the file Repayment.Classes.cs to generate this json as well
@@ -86,20 +85,38 @@ StringContent GetJsonData()
     return content;
 }
 
+// ---------------------------------------------------------------------------
+//  Recreates the Json using the data classes provided
+// ---------------------------------------------------------------------------
+StringContent GetDataFromClass()
+{
+    RepaymentHeader loan = new();
+    loan.Repayments.Add(new Repayment { LoanId = "loan_id_1", Amount = 480.00M, ClientId = "client_id_1" });
+    
+    string json = JsonSerializer.Serialize(loan);
+    
+    Console.WriteLine($"Loan object serizlied to json: {json}");
+    
+    var content = new StringContent(json, Encoding.UTF8, "application/json");
+    return content;
+}
 
 // ---------------------------------------------------------------------------
 async Task DoRepayment()
 {
-
     var content = GetJsonData();
+    // uncomment the line below (and comment out the above line) to use the data classes instead of json data file
+    // var content = GetDataFromClass();
     using HttpClient client = new();
     client.DefaultRequestHeaders.Accept.Clear();
     client.DefaultRequestHeaders.Accept.Add(
         new MediaTypeWithQualityHeaderValue("application/json"));
     client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", BearerToken);
 
-    var response = await client.PostAsync($"https://{PartnerDomain}/v3/partner/{PartnerId}/repayments",
-        content);
+    string url = $"https://{PartnerDomain}/v3/partner/{PartnerId}/repayments";
+    Console.WriteLine($"using url: {url}");
+    
+    var response = await client.PostAsync(url, content);
     
     var json = await response.Content.ReadAsStringAsync();
     
