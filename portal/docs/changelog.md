@@ -9,7 +9,8 @@ sidebar_position: 1
 This changelog lists all additions and updates to the Kiva Partner API, in chronological order.
 
 ## October 14, 2021
-1. Additional documentation on scopes and 403 errors. 
+1. Additional documentation on scopes and 403 errors.
+2. Internally updated documentation ordering
 
 ## September 30, 2022
 1. Released updated documentation portal.
