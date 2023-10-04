@@ -8,7 +8,8 @@ We recommend that your technical team consults with the Kiva Coordinator at your
 
 * [This video](https://www.youtube.com/watch?v=9gScexv-yZo&amp;t=5s) provides a thorough explanation on how to post an individual loan
 * [This video](https://www.youtube.com/watch?v=KvKUScWF73M&amp;t=1s) provides a thorough explanation on how to post a group loan
-* Visit the New Loans section for more information, specifically [Step 1: Description - Individual Loans](https://kivapartnerhelpcenter.zendesk.com/hc/en-us/articles/360030919632) and [Step 1: Description - Group Loans](https://kivapartnerhelpcenter.zendesk.com/hc/en-us/articles/360031260191)
+* Visit the New Loans section for more information, specifically [Step 1: Description - Individual Loans](https://kivapartnerhelpcenter.zendesk.com/hc/en-us/articles/360030919632) 
+* and [Step 1: Description - Group Loans](https://kivapartnerhelpcenter.zendesk.com/hc/en-us/articles/360031260191)
 
 ### Process
 
@@ -30,6 +31,18 @@ If posting an individual loan, do not include any of the following fields. **The
 * `internal_client_id`: this is the ID of each client represented within the group (for example, if a group has three members, each member might have their own client ID that should be listed here)
 * `internal_loan_id`: this is the ID for each individual borrower's loan (for example, a member of the group might be taking out their third loan with the organization, and that loan might have a unique ID. Enter that ID here)
 * `not_pictured`: use this field in case any borrower is listed in Step 1: Description does not appear in the photo
+
+### not_pictured field
+
+The `not_pictured` field is a list of true or false values that correspond to the order of the borrowers listed 
+in [Step 1: Description - Group Loans](https://kivapartnerhelpcenter.zendesk.com/hc/en-us/articles/360031260191).
+
+For example, if the first borrower listed in Step 1 is _not pictured_, 
+the first value in the `not_pictured` list should be `true`. If the second borrower listed in Step 1 is 
+pictured, the second value in the `not_pictured` list should be `false`. If the third borrower listed in Step 1
+is _not pictured_, the third value in the `not_pictured` list should be `true`. And so on.
+
+When providing values for the `not_pictured` field, values for all borrowers listed in Step 1 must be provided.
 
 The borrower photo can be sent to PA2 as a base-64 encoded image. Repayment Schedules can be sent in several different formats. If you believe a format different from the one in the example below will work better for your organization, please let Kiva know and we will provide more information.
 
