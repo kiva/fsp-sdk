@@ -6,6 +6,10 @@ sidebar_position: 1
 Manténgase al tanto de todos los cambios realizados a la API para socios de Kiva.
 Este registro de cambios enumera todas las adiciones y actualizaciones realizadas a la API para socios de Kiva, en orden cronológico..
 
+## October 14, 2021
+1. Additional documentation on scopes and 403 errors.
+2. Internally updated documentation ordering
+
 ## Septiembre 30 de 2022
 1. Publicación del portal de documentación actualizado
 . 
