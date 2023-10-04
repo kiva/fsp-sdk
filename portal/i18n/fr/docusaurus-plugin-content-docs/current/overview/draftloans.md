@@ -26,6 +26,13 @@ Si un prêt individuel est comptabilisé, aucune des zones suivantes ne doit êt
 * `internal_loan_id`: il s'agit de l'ID de chaque prêt individuel (par exemple, un membre du groupe pourrait obtenir son troisième prêt auprès de l'organisation, et ce prêt pourrait avoir un ID unique). Entrez ce numéro d'identification ici)
 * `not_pictured`: utilisez ce champ dans le cas où un emprunteur est listé à la rubrique 1 : Description n'apparaît pas dans la photo
 
+## Paramètre : not_pictured
+
+Le champ not_pictured est une liste de valeurs vraies ou fausses correspondant à l'ordre des emprunteurs énumérés à l'étape 1 : [l'étape 1 : Description - Prêts de groupe](https://kivapartnerhelpcenter.zendesk.com/hc/en-us/articles/360031260191).
+
+Par exemple, si le premier emprunteur listé à l'étape 1 n'est pas sur la photo, la première valeur de la liste not_pictured doit être true. Si le deuxième emprunteur mentionné à l'étape 1 apparaît sur la photo, la deuxième valeur de la liste not_pictured doit être false. Si le troisième emprunteur de l'étape 1 n'apparaît pas sur la photo, la troisième valeur de la liste not_pictured doit être vraie. Et ainsi de suite.
+Lorsque vous fournissez des valeurs pour le champ not_pictured, vous devez le faire pour tous les emprunteurs énumérés à l'étape 1.
+
 La photo de l'emprunteur peut être envoyée à PA2 avec l’API. Les tableaux de remboursement peuvent être envoyés dans plusieurs formats différents. Si vous pensez qu'un format différent de l'exemple ci-dessous conviendrait mieux à votre organisation, veuillez en informer Kiva et nous vous fournirons de plus amples informations. Pour vérifier si le document JSON que vous avez créé est correct, vous pouvez utiliser un validateur JSON en ligne comme celui-ci : https://jsonlint.com/ .
 
 ### Paramètres pour les projets de crédit
