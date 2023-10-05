@@ -104,10 +104,11 @@ StringContent GetDataFromClass()
 // ---------------------------------------------------------------------------
 async Task DoRepayment()
 {
-    var content = GetJsonData();
+    // var content = GetJsonData();
     // uncomment the line below (and comment out the above line) to use the data classes instead of json data file
-    // var content = GetDataFromClass();
+    var content = GetDataFromClass();
     using HttpClient client = new();
+    client.DefaultRequestVersion = new Version(2, 0);
     client.DefaultRequestHeaders.Accept.Clear();
     client.DefaultRequestHeaders.Accept.Add(
         new MediaTypeWithQualityHeaderValue("application/json"));
