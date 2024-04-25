@@ -1,5 +1,7 @@
 
+using System.Text.Json;
 using System.Text.Json.Serialization;
+using loan.draft;
 
 public class ActivityItem
 {
@@ -140,7 +142,7 @@ public class LoanDraft
 
     [JsonPropertyName("loanuse")]
     public string Loanuse { get; set; }
-
+    
     [JsonPropertyName("location")]
     public string Location { get; set; }
 
@@ -149,7 +151,8 @@ public class LoanDraft
 
     [JsonPropertyName("schedule")]
     public List<Schedule> Schedule { get; set; } = new ();
-
+    
+    [JsonConverter(typeof(IgnoreZeroConverter))]
     [JsonPropertyName("theme_type_id")]
     public int ThemeTypeId { get; set; }
 }
